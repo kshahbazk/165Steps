@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+      <link rel="stylesheet" href="css/forms.css">
+      <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="js/buttons.js"></script>
+
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+
+    <script>
+		var isLoggedIn;
+		var isUser = false;
+		count = 0;
+
+
+    </script>
+
+    <style>
+
+		.has-success, .has-error {
+
+		}
+
+
+        .scrollable-menu {
+            height: auto;
+            max-height: 250px;
+            min-height: 250px;
+            overflow-x: hidden;
+        }
+
+        .wp-block.product {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #e0eded;
+        }
+
+        .maxmin {
+            max-height:200px;
+            min-height:200px;
+            height: 200px;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+    }
+    </style>
+    <script type="text/javascript" src="signUp.js"></script>
+
+    <title>Service Creation</title>
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="signUp.css" rel="stylesheet">
+  </head>
+  <body>
+  		<script src="js/createNavBar.js"></script>
+        <script>
+        	$(".ifNotLoggedIn").hide();
+			$(".ifLoggedIn").hide();
+        </script>
+		<!--<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display --
+             <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Steps</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling --
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </form>
+                  <ul class="nav navbar-nav navbar-right ifNotLoggedIn">
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                        <ul id="login-dp" class="dropdown-menu">
+                            <li>
+                                 <div class="row">
+                                        <div class="col-md-12">
+                                             <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                                    <div class="form-group">
+                                                         <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                                         <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                         <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                         <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                                         <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                         <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                                    </div>
+                                             </form>
+                                        </div>
+                                        <div class="bottom text-center">
+                                            New here ? <a href="#"><b>Join Us</b></a>
+                                        </div>
+                                 </div>
+                            </li>
+                        </ul>
+
+
+                    </li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right ifLoggedIn">
+                            <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Name</b><span class="caret"></span></a>
+                              <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Profile Page</a></li>
+                                <li><a href="#">Manage Services</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Logout</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                </div><!-- /.navbar-collapse --
+            </div>
+            <!-- /.container --
+        </nav>-->
+        <div class="container" id="wrap">
+
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-md-10 col-sm-11">
+                        <h2 style="margin-left:290px;">Create a Service</h2>
+
+
+                        <form class="form-horizontal" method="post" id="createService">
+
+                         <div class="form-group">
+                         <label class="col-md-4 control-label" for="serviceName">Buyer or Seller</label>
+                        	<div class="btn-group" data-toggle="buttons" style="margin-left:15px;">
+
+                              <label class="btn btn-primary">
+                                <input type="radio" name="options" id="option1" autocomplete="off"> Buyer
+                              </label>
+                              <label class="btn btn-primary">
+                                <input type="radio" name="options" id="option2" autocomplete="off"> Seller
+                              </label>
+                              </div>
+                            </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="serviceName">Service Name</label>
+                          <div class="col-md-6">
+                          <input id="serviceName" name="serviceName" placeholder="Insert Service Name here" class="form-control input-md" type="text">
+
+                          </div>
+                        </div>
+
+                        <!-- Textarea -->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="serviceDescription">Description</label>
+                          <div class="col-md-6">
+                            <textarea class="form-control" id="serviceDescription" name="serviceDescription"></textarea>
+                          </div>
+                        </div>
+
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="selectbasic">Deadline</label>
+                          <div class="col-md-2">
+                            <select id="month" name="month" class="form-control">
+                              <option value="1">January</option>
+                              <option value="2">February</option>
+                              <option value="3">March</option>
+                              <option value="4">April</option>
+                              <option value="5">May</option>
+                              <option value="6">June</option>
+                              <option value="7">July</option>
+                              <option value="8">August</option>
+                              <option value="9">September</option>
+                              <option value="10">October</option>
+                              <option value="11">November</option>
+                              <option value="12">December</option>
+                            </select>
+                          </div>
+                          <div class="col-md-2" onClick="hideDays()">
+                            <select id="day" name="day" class="form-control">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                              <option value="11">11</option>
+                              <option value="12">12</option>
+                              <option value="13">13</option>
+                              <option value="14">14</option>
+                              <option value="15">15</option>
+                              <option value="16">16</option>
+                              <option value="17">17</option>
+                              <option value="18">18</option>
+                              <option value="19">19</option>
+                              <option value="20">20</option>
+                              <option value="21">21</option>
+                              <option value="22">22</option>
+                              <option value="23">23</option>
+                              <option value="24">24</option>
+                              <option value="25">25</option>
+                              <option value="26">26</option>
+                              <option value="27">27</option>
+                              <option value="28">28</option>
+                              <option class="February" value="29">29</option>
+                              <option class="February" value="30">30</option>
+                              <option class="April June September November February" value="31">31</option>
+                            </select>
+                          </div>
+                          <div class="col-md-2">
+                            <select id="year" name="year" class="form-control">
+                              <option value="2015">2015</option>
+                              <option value="2016">2016</option>
+                              <option value="2017">2017</option>
+                              <option value="2018">2018</option>
+                              <option value="2019">2019</option>
+                            </select>
+                          </div>
+
+                          <script>
+						  function hideDays() {
+							  var month = document.getElementById("month");
+							  if(month.value == 2)
+						   	  {
+								  $('option.February').hide();
+							  }
+							  else if(month.value == (4||6||9||11))
+							  {
+								  $('option.February').show();
+								  $('option.April').hide();
+							  }
+							  else
+							  {
+								  $('option.February').show();
+							  }
+						  }
+                          </script>
+
+                        </div>
+
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="servicePrice">Price</label>
+                          <div class="col-md-6">
+                            <select id="servicePrice" name="servicePrice" class="form-control">
+                              <option value="10">$10</option>
+                              <option value="20">$20</option>
+                              <option value="30">$30</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="serviceSubmit"></label>
+                          <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </div>
+                        </div>
+
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+<script>$(".glyphicon").hide();</script>
+              <!-- FOOTER -->
+      <script src="js/createFooter.js"></script>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/handlebars.js"> </script>
+
+    <script type="text/javascript">
+
+      Parse.initialize("iJgCVgcqKKWl5drVVV0pu8ztWaXHT6NB87dlgiq7", "ah5O4IvqZrTZcjUEEuioXpqZngnzbzATAOdg14pz");
+    </script>
+    <script src="js/login.js"></script>
+
+    <script src="js/buttons.js"></script>
+    <script type="text/javascript" src="js/createService.js"></script>
+  </body>
+</html>

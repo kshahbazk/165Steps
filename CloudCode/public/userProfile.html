@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+      <link rel="stylesheet" href="css/forms.css">
+      <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+
+
+
+    <script type="text/javascript">
+        var isLoggedIn;
+        var isUser = false;
+        var count = 0;
+
+    </script>
+
+
+      <style>
+		.scrollable-menu {
+			height: auto;
+			max-height: 250px;
+			min-height: 250px;
+			overflow-x: hidden;
+		}
+
+		.wp-block.product {
+		  background: #fff;
+		  padding: 15px;
+		  margin-bottom: 20px;
+		  border: 2px solid #e0eded;
+		}
+
+		.maxmin {
+			max-height:200px;
+			min-height:200px;
+			height: 200px;
+		    overflow: hidden;
+		    overflow-y: auto;
+		}
+
+
+	</style>
+   <title>userPage</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/shop-item.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+</head>
+
+<body>
+
+	<script src="js/createNavBar.js"></script>
+    <!--<!-- Navigation --
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display --
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Steps</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling --
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class=""><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+              <ul class="nav navbar-nav navbar-right ifNotLoggedIn">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                    <ul id="login-dp" class="dropdown-menu">
+                        <li>
+                             <div class="row">
+                                    <div class="col-md-12">
+                                         <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                                <div class="form-group">
+                                                     <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                                     <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                                </div>
+                                                <div class="form-group">
+                                                     <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                     <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                                     <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                                </div>
+                                                <div class="form-group">
+                                                     <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                                </div>
+                                         </form>
+                                    </div>
+                                    <div class="bottom text-center">
+                                        New here ? <a href="#"><b>Join Us</b></a>
+                                    </div>
+                             </div>
+                        </li>
+                    </ul>
+
+
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right ifLoggedIn">
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Name<span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Profile Page</a></li>
+                            <li><a href="#">Manage Services</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#" onclick="logOut();" >Logout</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+            </div><!-- /.navbar-collapse --
+        </div>
+        <!-- /.container --
+    </nav>-->
+
+    <!-- Page Content -->
+    <div class="container" style="background-color:#EAEAEA">
+
+        <div class="row" style="margin-left:15px; margin-right:15px; margin-top:20px;">
+
+			<div class="col-sm-3">
+             <img src="http://dreamatico.com/data_images/kitten/kitten-2.jpg"
+             alt="Generic placeholder thumbnail"
+             style="max-width:250px;max-height:250px;"
+             onMouseOver="" onMouseOut=""
+             class="thumbnail" id="profilePic">
+                 <button type="button" class="regular" name="edit" id="edit" onclick=
+                 "do_change(); return false;" style="position:absolute; top: 183px;
+                 display:none;">
+                    Edit
+                </button>
+                <button type="button" class="regular" name="save" id="save" onclick=
+                 "change_back()" style="position:absolute; top: 183px; display:none;">
+                    Save
+                </button>
+                <button type="button" class="regular" name="upload" id="upload" onclick=
+                 "change_back()" style="position:absolute; top: 183px;
+                 left: 62px; display:none;">
+                    Upload
+                </button>
+                <span class="btn btn-success fileinput-button" id="testbutton"
+                style="display:none;">
+                    <input id="fileupload" type="file" name="files[]" multiple>
+                </span>
+            </div>
+
+            <div class="col-sm-8" style="background-color:#FFF; width:72%; height:90%;">
+
+                    <div class="caption-full">
+
+                        <h2 id="profileName">Simba the Ravager</h2>
+
+                        <div>
+                        	<div style="float:left; padding-right:4px; padding-top:3px;">
+                                <i class="glyphicon glyphicon-phone" style="font-size:1.2em;"></i>
+                            </div>
+                            <div class="text-left">
+                            	<p id="profileCellphone"><font size="4">(800) 548-8228</font></p>
+                            </div>
+                        </div>
+
+                        <div>
+                        	<div style="float:left; padding-right:5px; padding-top:3px;">
+                            	<i class="glyphicon glyphicon-envelope" style="font-size:1.2em;"></i>
+                            </div>
+                            <div class="text-left">
+                            	<p id="profileEmail"><font size="4">simba@pridelands.com</font></p>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <br><br><br>
+                    <div class="ratings">
+                        <p class="pull-right">3 reviews</p>
+                        <p>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            4.0 stars
+                        </p>
+                    </div>
+            </div>
+         </div>
+
+         <div class="container">
+            <div class="row"  style="margin-right:50px;">
+                <div class="col-md-4" style="left:15px;">
+                  <div class="bs-example">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Preferred Services</div>
+                                <div id="listOfServ" class="list-group scrollable-menu first-menu" data-count="0">
+                                    <div class="col-md-10" style="width:100%; padding:0px; margin:0px;" id="list">
+
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                  <p style="float:left;"><a class="btn btn-default" id="editBtnForPref" href="#" role="button" onClick="editHide()" style="display:none;">Edit Preferred Services</a></p>
+                  <p style="float:left;"><a class="btn btn-default" id="addBtnForPref" href="#" role="button" onClick="add()" style="display:none;">Add New Service</a></p>
+                  <p style="float:left;"><a class="btn btn-default" id="saveBtnForPref" href="#" role="button" onClick="saveHide()" style="display:none;">Save Preferred Services</a></p>
+                  <a class="btn btn-default" id="editPageBtn" href="#" role="button" onClick="editPage()" style="display:none;">Edit Page</a>
+                  <a class="btn btn-default" id="savePageBtn" href="#" role="button" onClick="savePage()" style="display:none;">Save Page</a>
+
+                </div><!-- /.col-lg-4 -->
+                <div class="col-md-4" style="left:10px;">
+                  <div class="bs-example">
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">Requested Services</div>
+                            <!--<div class="panel-body">
+                                <p>The following products are currently
+                                available on our store.</p>
+                            </div>-->
+                            <!-- List group -->
+                            <div class="list-group scrollable-menu">
+                            	<div class="col-md-10" style="width:100%; padding:0px; margin:0px;" id="reqList">
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-md-4" style="left:10px;">
+                  <div class="bs-example">
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">History of Services</div>
+                            <!--<div class="panel-body">
+                                <p>The following products are currently
+                                available on our store.</p>
+                            </div>-->
+                            <!-- List group -->
+                            <div class="list-group scrollable-menu">
+                                <div class="col-md-10" style="width:100%; padding:0px; margin:0px;" id="histList">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.col-lg-4 -->
+     		 </div><!-- /.row -->
+
+             <hr style="height:3px;border:none;color:#333;background-color:#969696; margin-right:50px; margin-left:15px;" align="center" />
+
+            <div class="col-md-12" style="padding-right:55px;">
+
+                    <div class="text-right">
+                        <a class="btn btn-success">Leave a Review</a>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            Anonymous
+                            <span class="pull-right">10 days ago</span>
+                            <p>This product was great in terms of quality. I would definitely buy another!</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            Anonymous
+                            <span class="pull-right">12 days ago</span>
+                            <p>I've alredy ordered another one!</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            Anonymous
+                            <span class="pull-right">15 days ago</span>
+                            <p>I've seen some better than this, but not at this price. I definitely recommend this item.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    <!-- /.container -->
+
+
+
+    <div class="container">
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Steps 2015</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript
+    <script src="js/bootstrap.min.js"></script>-->
+    <script type="text/x-handlebars-template" id="requested-post-template">
+
+
+									<!-- Feed Entry -->
+									<a id={{name}} class="list-group-item editableList" href="#"><font>{{description}}</font></a>
+
+								  </script>
+    <script type="text/x-handlebars-template" id="history-post-template">
+
+                                    <!-- Feed Entry -->
+   				<a id="test" class="list-group-item editableList" data-value={{objectId}} onclick="linkToServicePage(this.getAttribute('data-value'))" ><font>{{name}}</font></a>
+
+     </script>
+
+    <script type="text/javascript">
+
+
+	      Parse.initialize("iJgCVgcqKKWl5drVVV0pu8ztWaXHT6NB87dlgiq7", "ah5O4IvqZrTZcjUEEuioXpqZngnzbzATAOdg14pz");
+	      //Parse.initialize("JE6mg7y9bSavnzvNIVWDIP3TJrTHQvgqMhdMQusW", "6XOmcuw8IttoPGuKLE9YgSAEADEGAbrpA1dAxT8hU");
+
+	    </script>
+
+        <script type="text/javascript" src="js/handlebars.js"> </script>
+        <script type="text/javascript" src="js/login.js"></script>
+        <script src="js/buttons.js"></script>
+
+</body>
+
+</html>

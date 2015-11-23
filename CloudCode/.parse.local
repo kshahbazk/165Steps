@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "Steps": {
+      "applicationId": "iJgCVgcqKKWl5drVVV0pu8ztWaXHT6NB87dlgiq7"
+    },
+    "_default": {
+      "link": "Steps"
+    }
+  }
+}
