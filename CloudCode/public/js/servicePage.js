@@ -1,0 +1,49 @@
+function getService(objectId){
+
+	var Service = Parse.Object.extend("service");
+	var query = new Parse.Query(Service);
+
+	var user;
+
+	query.get(objectId, {
+  success: function(service) {
+    // The object was retrieved successfully.
+    $("#serviceName").html(service.get("name"));
+    $("#serviceDescription").html(service.get("description"));
+    $("#servicePrice").html("$"+service.get("price")+ ".00");
+    user = service.get("serviceSeller");
+    getUser(user);
+
+  },
+  error: function(object, error) {
+    // The object was not retrieved successfully.
+    // error is a Parse.Error with an error code and message.
+    console.log(error.message);
+
+  }
+});
+
+
+	return user;
+
+
+}
+
+
+function getUser(user) {
+
+	$("#userName").html(user.get("firstName"));
+	 $("#userEmail").html(user.get("email"));
+
+}
+
+$(document).ready(function(){
+var id = 	sessionStorage.getItem("serviceId");
+var user = getService(id);
+	//var qs = new Querystring();
+//	var v1 = qs.get("objectId");
+
+	console.log("este e o id"+ id);
+
+
+})

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+      <link rel="stylesheet" href="css/forms.css">
+      <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+      <!-- Custom CSS -->
+    <link href="shop-item.css" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+
+
+    <style>
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #999;
+}
+    </style>
+
+    <script type="text/javascript">
+        var isLoggedIn;
+        var isUser = false;
+        var count = 0;
+
+
+    </script>
+
+    <style>
+		.scrollable-menu {
+			height: auto;
+			max-height: 250px;
+			min-height: 250px;
+			overflow-x: hidden;
+		}
+
+		.wp-block.product {
+		  background: #fff;
+		  padding: 15px;
+		  margin-bottom: 20px;
+		  border: 2px solid #e0eded;
+		}
+
+		.maxmin {
+			max-height:200px;
+			min-height:200px;
+			height: 200px;
+		    overflow: hidden;
+		    overflow-y: auto;
+		}
+
+
+	</style>
+
+    <title>Service name</title>
+
+
+
+    <!-- Custom CSS -->
+    <link href="css/shop-item.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <script src="js/createNavBar.js"></script>
+
+    <!-- Page Content -->
+    <div class="container" style="background-color:#EAEAEA">
+
+        <div class="row">
+			<!-- Start left table -->
+            <div class="col-md-7">
+
+                <div class="thumbnail" style="margin-top:15px;">
+
+                    <div class="caption-full">
+                        <h4 class="pull-right" id="servicePrice">$30.00</h4>
+                        <h2 id="serviceName">Bring Books Across Campus</h2>
+                        <h3>Description</h3>
+                        <p id="serviceDescription">I need some books to be brought across campus into the CVB building. Meet me in the front of the building.</p>
+                </div>
+
+                <div class="bs-example">
+                    <div class="panel panel-default">  <button class="pull-right btn btn-success text-center" style="margin-top:3px; margin-right:3px;">Add Yourself to the List!</button>
+                        <div class="panel-heading">List of Steppers Looking at this Service</div>
+
+                            <div id="listOfServ" class="list-group scrollable-menu first-menu" data-count="0">
+                                <div class="col-md-10" style="width:100%; padding:0px; margin:0px;" id="list">
+                                    <!-- Start list of Steppers here -->
+
+                                    <!-- End list -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</div>
+
+
+            </div><!-- End left table -->
+
+            <!-- Start Right Table -->
+            <div class="col-md-5" style="margin-top:15px;">
+
+                <div class="col-sm-6 col-md-4" style="margin-top:15px; background-color:#FFF;" >
+                    <img src="http://dreamatico.com/data_images/kitten/kitten-2.jpg" alt="" class="img-rounded img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8" style="margin-top:15px; background-color:#FFF;" >
+                    <h4 id="userName">Simba the Ravager</h4>
+
+                    <p>
+                        <i class="glyphicon glyphicon-envelope" ></i><span id="userEmail">simba@pridelands.com</span>
+                        <br />
+                        <i class="glyphicon glyphicon-phone" id="userCellphone"></i>(800) 548-8228
+                        <br />
+                     </p>
+
+                </div>
+
+                <div class="well" style="background-color:#FFF;">
+					<br><br>
+                    <div class="text-right" style="padding-top:10px;">
+                        <a class="btn btn-success">Leave a Review</a>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            Anonymous
+                            <span class="pull-right">10 days ago</span>
+                            <p>This product was great in terms of quality. I would definitely buy another!</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            Anonymous
+                            <span class="pull-right">12 days ago</span>
+                            <p>I've alredy ordered another one!</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            Anonymous
+                            <span class="pull-right">15 days ago</span>
+                            <p>I've seen some better than this, but not at this price. I definitely recommend this item.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div><!-- End right table -->
+
+
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <script src="js/createFooter.js"></script>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+
+
+    <script type="text/javascript" src="js/handlebars.js"> </script>
+        <script type="text/javascript" src="js/login.js"></script>
+        <script src="js/buttons.js"></script>
+
+<script type="text/x-handlebars-template" id="requested-post-template">
+
+
+									<!-- Steppers Entry -->
+									<a id={{name}} class="list-group-item editableList" href="#"><font>{{description}}</font></a>
+
+								  </script>
+
+    <script type="text/javascript">
+	      Parse.initialize("iJgCVgcqKKWl5drVVV0pu8ztWaXHT6NB87dlgiq7", "ah5O4IvqZrTZcjUEEuioXpqZngnzbzATAOdg14pz");
+	      //Parse.initialize("JE6mg7y9bSavnzvNIVWDIP3TJrTHQvgqMhdMQusW", "6XOmcuw8IttoPGuKLE9YgSAEADEGAbrpA1dAxT8hU");
+
+	    </script>
+        <script type="text/javascript" src="js/servicePage.js"></script>
+
+</body>
+
+</html>
