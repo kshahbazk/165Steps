@@ -82,7 +82,7 @@
     <!-- Page Content -->
 		<!-- Start Modal -->
 	  <div class="modal fade" id="editModalOpen" role="dialog">
-	    <div class="modal-dialog">
+	    <div class="modal-dialog" style="width:800px;">
 
 	      <!-- Modal content-->
 	      <div class="modal-content">
@@ -214,6 +214,11 @@
 	                <div class="form-group">
 	                  <label class="col-md-4 control-label" for="servicePrice">Price</label>
 	                  <div class="col-md-6">
+                        <select style="visibility:hidden; position:absolute;" id="servicePrice" name="servicePrice" class="form-control">
+	                      <option value="10">$10</option>
+	                      <option value="20">$20</option>
+	                      <option value="30">$30</option>
+	                    </select>
 	                    <select id="servicePrice" name="servicePrice" class="form-control">
 	                      <option value="10">$10</option>
 	                      <option value="20">$20</option>
@@ -280,13 +285,10 @@
                         <div class="panel-heading">Buying Services</div>
                         <!-- List group -->
                         <div class="list-group scrollable-menu">
-                            <div class="col-md-10" style="width:100%; padding:0px; margin:0px;">
+                            <div id="buyingManageList" class="col-md-10" style="width:100%; padding:0px; margin:0px;">
                             <!-- Start Buying Template -->
                             <!--This is where the Buying List starts. This can be the template -->
-                            <a id="buyingManageList" class="list-group-item buyingList" href="#">
-
-
-                            </a>
+                            
                         	<!--End template -->
 
                             </div>
@@ -314,12 +316,10 @@
                         </div>-->
                         <!-- List group -->
                         <div class="list-group scrollable-menu">
-                            <div class="col-md-10" style="width:100%; padding:0px; margin:0px;">
+                            <div id="sellingManageList" class="col-md-10" style="width:100%; padding:0px; margin:0px;">
                             <!-- Start Selling template -->
                             <!-- This is where the Selling List starts. -->
-                            <a id="sellingManageList" class="list-group-item sellingList" href="#">
-
-                            </a>
+                            
                         	<!-- End Template -->
 
                             </div>
