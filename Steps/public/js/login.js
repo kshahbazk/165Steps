@@ -46,6 +46,7 @@ function checkUser(){
     $("#navBarName").html(user.get("firstName"));
 
     //change names in the profile page
+    $("#profilePic")[0].src = user.get("profileImage").url();
     $("#profileName").html(user.get("firstName")+" "+user.get("lastName"));
     $("#profileCellphone").html(user.get("cellphone"));
     $("#profileEmail").html(user.get("email"));

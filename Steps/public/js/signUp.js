@@ -13,6 +13,14 @@ function signUp(){
 	var email = $("#inputEmail").val();
 	var password = $("#inputPassword").val();
 	var confirmPassword = $("#confirmPassword").val();
+	var fileUploadControl = $("#upload-file")[0];
+	var parseFile;
+	if (fileUploadControl.files.length > 0) {
+	  var file = fileUploadControl.files[0];
+	  var name = "photo.jpg";
+
+	  parseFile = new Parse.File(name, file);
+	}
 
 	var user = new Parse.User();
 
@@ -22,7 +30,7 @@ function signUp(){
 	user.set("username",email);
 	user.set("firstName",firstName);
 	user.set("lastName",lastName);
-
+	user.set("profileImage",parseFile);
 	//check password
 	if(password == confirmPassword){
 		user.set("password", password);
