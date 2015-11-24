@@ -47,6 +47,6 @@ Parse.Cloud.define("hello", function(request, response) {
       console.error(httpResponse);
       response.error("Uh oh, something went wrong");
     }
-  });*/
+  });
 
-});
+});*/
