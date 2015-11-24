@@ -2,6 +2,8 @@
  * Created by shahbazkhan on 11/23/15.
  */
 
+var searchedWord = $("#searchTerm").val();
+
 function search() {
 
     var searchedWord = $("#searchTerm").val();
@@ -18,3 +20,4 @@ function search() {
 
 
 }
+
