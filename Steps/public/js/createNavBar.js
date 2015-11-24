@@ -16,8 +16,8 @@ document.write(
             <!-- Collect the nav links, forms, and other content for toggling -->
             "<div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>"+
              " <ul class='nav navbar-nav'>"+
-			 	"<li><a href='userProfile.html'>Profile Page</a></li>"+
-                "<li class='dropdown'>"+
+			 	"<li class='hideAway'><a href='userProfile.html'>Profile Page</a></li>"+
+                "<li class='dropdown hideAway'>"+
                  " <a href='#' class='dropdown-toggle' data-toggle='dropdown'>Service Options<span class='caret'></span></a>"+
                   "<ul class='dropdown-menu' role='menu'>"+
                     "<li><a href='createService.html'>Create Service</a></li>"+
@@ -79,3 +79,4 @@ document.write(
         "</div>"+
         <!-- /.container -->
     "</nav>");
+

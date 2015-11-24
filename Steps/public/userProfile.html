@@ -61,6 +61,43 @@
 
     <!-- Custom CSS -->
     <link href="css/shop-item.css" rel="stylesheet">
+    
+    <!-- Start Stars Library
+    	Functions: 
+
+        $('select').barrating('show');
+        Shows the rating widget.
+        
+        $('select').barrating('set', value);
+        Sets the value of the rating widget.
+        
+        $('select').barrating('readonly', state);
+        Switches the read-only state to true or false.
+        
+        $('select').barrating('clear');
+        Clears the rating.
+        
+        $('select').barrating('destroy');
+        Destroys the rating widget.
+         -->
+      <link rel="stylesheet" href="js/jquery-bar-rating/dist/themes/bootstrap-stars.css">
+      
+      <script src="js/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+		<script type="text/javascript">
+           $(function() {
+              $('.bootStars').barrating({
+                theme: 'bootstrap-stars'
+              });
+			  
+			  $("#avgRating").barrating('readonly',true);
+			  $("#avgRating").barrating('set',3);
+			  
+			  $(".userRating").barrating('readonly',true);
+			  $(".userRating").barrating('set',3);
+           });
+        </script>
+        
+    <!-- End Stars Library -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -82,31 +119,53 @@
 
         <div class="row" style="margin-left:15px; margin-right:15px; margin-top:20px;">
 
+			
+
+
 			<div class="col-sm-3">
              <img src="http://dreamatico.com/data_images/kitten/kitten-2.jpg"
              alt="Generic placeholder thumbnail"
              style="max-width:250px;max-height:250px;"
              onMouseOver="" onMouseOut=""
-             class="thumbnail" id="profilePic">
-                 <button type="button" class="regular" name="edit" id="edit" onclick=
-                 "do_change(); return false;" style="position:absolute; top: 183px;
-                 display:none;">
-                    Edit
-                </button>
-                <button type="button" class="regular" name="save" id="save" onclick=
-                 "change_back()" style="position:absolute; top: 183px; display:none;">
-                    Save
-                </button>
-                <button type="button" class="regular" name="upload" id="upload" onclick=
-                 "change_back()" style="position:absolute; top: 183px;
-                 left: 62px; display:none;">
-                    Upload
-                </button>
-                <span class="btn btn-success fileinput-button" id="testbutton"
-                style="display:none;">
-                    <input id="fileupload" type="file" name="files[]" multiple>
-                </span>
+             class="thumbnail" id="profilePic" onClick="openEditPicture()">
+                <!-- Start Picture Pop-up -->
+                      <div class="modal fade" id="editPictureOpen" role="dialog">
+                        <div class="modal-dialog" style="width:800px;">
+                
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Edit Picture</h4>
+                            </div>
+                            <div class="modal-body">
+                            
+                            <input type="file" id="upload-file" name="file[]" style="margin-left:11px;"/>
+                            <div class="form-group" style="margin-bottom:20px; margin-top:10px;">
+                              <div class="col-md-4 btn-group">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                              </div>
+                            </div>
+                            
+                            </div>
+                            <div class="modal-footer" style="margin-top:20px;">
+                
+                            </div>
+                          </div>
+                
+                        </div>
+                      </div>
             </div>
+            <script>
+			function openEditPicture()
+			{
+				if(isLoggedIn){
+					$("#editPictureOpen").modal();
+				}
+			}
+			
+			</script>
 
             <div class="col-sm-4" style="background-color:#FFF; height:210px; ">
 
@@ -131,13 +190,92 @@
                             	<p id="profileEmail"><font size="4">simba@pridelands.com</font></p>
                             </div>
                         </div>
+                        
+                        <div>
+                        	<button class="btn btn-default" onClick="editInfo()">Edit Info</button>
+                        </div>
+                        
+                        <!-- Start Review Pop-up -->
+                      <div class="modal fade" id="editUserInfo" role="dialog">
+                        <div class="modal-dialog" style="width:800px;">
+                
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Edit Personal Info</h4>
+                            </div>
+                            <div class="modal-body">
+                            
+                            <form class="form-horizontal" method="post" id="editPersInfo">
+        
+                            <!-- Textarea -->
+                            <div class="form-group">
+                              <label class="col-md-4 control-label" for="changePhone">Change Phone Number</label>
+                              <div class="col-md-6">
+                                <input class="form-control" id="changePhone" name="changePhone"></textarea>
+                              </div>
+                            </div>
+                            
+                            <div class="form-group">
+                              <label class="col-md-4 control-label" for="changePassword">Change Password</label>
+                              <div class="col-md-6">
+                                <input type="password" class="form-control" id="changePassword" name="changePassword"></textarea>
+                              </div>
+                            </div>
+                            
+                            <div class="form-group">
+                              <label class="col-md-4 control-label" for="confirmPassword">Confirm Password</label>
+                              <div class="col-md-6">
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"></textarea>
+                              </div>
+                            </div>
+                            
+                            <div class="form-group" style="margin-bottom:20px; margin-top:10px;">
+                              <label class="col-md-4 control-label" for="serviceSubmit"></label>
+                              <div class="col-md-4 btn-group">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                              </div>
+                            </div>
+                            
+                            </div>
+                            <div class="modal-footer" style="margin-top:20px;">
+                
+                            </div>
+                          </div>
+                
+                        </div>
+                      </div>
+                      
+                      <script>
+						function editInfo()
+						{
+							if(isLoggedIn){
+								$("#editUserInfo").modal();
+							}
+						}
+						</script>
 
-
+					
 
 
                     </div>
-                    <br><br>
+                    <br>
                     <div class="ratings">
+                    	<p class="pull-right"># reviews</p>
+                        <div class="br-wrapper br-theme-bootstrap-stars">
+                            <select class="bootStars" id="avgRating">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!--<div class="ratings">
                         <p class="pull-right">3 reviews</p>
                         <p>
                             <span class="glyphicon glyphicon-star"></span>
@@ -147,7 +285,7 @@
                             <span class="glyphicon glyphicon-star-empty"></span>
                             4.0 stars
                         </p>
-                    </div>
+                    </div>-->
             </div>
             
             <div class="col-md-5">
@@ -178,52 +316,98 @@
             <div class="col-md-12" style="margin:auto; width:65%; margin-left:315px;">
 
                     <div class="text-right">
-                        <a class="btn btn-success">Leave a Review</a>
+                        <a class="btn btn-success" onClick="leaveTheReview()">Leave a Review</a>
                     </div>
-
+                    
+                    <!-- Start Review Pop-up -->
+                      <div class="modal fade" id="leaveReview" role="dialog">
+                        <div class="modal-dialog" style="width:800px;">
+                
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Leave a Review</h4>
+                            </div>
+                            <div class="modal-body">
+                            
+                                <form class="form-horizontal" method="post" id="reviewForm">
+                                
+                                <!-- Stars -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="starsForReview">Rating</label>
+                                    <div class="col-md-6 br-wrapper br-theme-bootstrap-stars" style="margin-top:10px;">
+                                        <select class="bootStars userRating" id="formStars">
+                                          <option value="1">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                          <option value="4">4</option>
+                                          <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+            
+                                <!-- Textarea -->
+                                <div class="form-group">
+                                  <label class="col-md-4 control-label" for="reviewDescription">Description</label>
+                                  <div class="col-md-6">
+                                    <textarea class="form-control" id="reviewDescription" name="reviewDescription"></textarea>
+                                  </div>
+                                </div>
+                                
+                                <div class="form-group" style="padding-top:110px;">
+                                  <label class="col-md-4 control-label" for="serviceSubmit"></label>
+                                  <div class="col-md-4 btn-group">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                  </div>
+                                </div>
+                            
+                            </div>
+                            <div class="modal-footer" style="margin-top:130px;">
+                
+                            </div>
+                          </div>
+                
+                        </div>
+                      </div>
+                      
+                      <script>
+						function leaveTheReview()
+						{
+							if(isLoggedIn){
+								$("#leaveReview").modal();
+							}
+						}
+						</script>
+                        
+                        <!-- End Review Pop-up -->
+                        
                     <hr>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                            Anonymous
-                            <span class="pull-right">10 days ago</span>
-                            <p>This product was great in terms of quality. I would definitely buy another!</p>
+                    <div class="row" id="appendReviewsHere">
+                    
+                    <!-- Start Review Template --> 
+                    
+                    	<div class="col-md-12">
+                        	Name
+                        
+                        	<span class="pull-right">Date when posted</span>
+                            <div class="br-wrapper br-theme-bootstrap-stars">
+                                <select class="bootStars userRating" id="userName">
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                </select>
+                            </div>
+                            <p>Description of review</p>
                         </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                            Anonymous
-                            <span class="pull-right">12 days ago</span>
-                            <p>I've alredy ordered another one!</p>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                            Anonymous
-                            <span class="pull-right">15 days ago</span>
-                            <p>I've seen some better than this, but not at this price. I definitely recommend this item.</p>
-                        </div>
+                        
+                        <br><br><br><hr style="width:98%;">
+                        
+                        <!-- End Review Template -->
                     </div>
 
                 </div>
@@ -237,20 +421,10 @@
 
     <div class="container">
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Steps 2015</p>
-                </div>
-            </div>
-        </footer>
+        <script src="js/createFooter.js"></script>
 
     </div>
     <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript
     <script src="js/bootstrap.min.js"></script>-->
@@ -264,7 +438,8 @@
     <script type="text/x-handlebars-template" id="history-post-template">
 
                                     <!-- Feed Entry -->
-   				<a id="test" class="list-group-item editableList" data-value={{objectId}} onclick="linkToServicePage(this.getAttribute('data-value'))" ><font>{{name}}</font></a>
+   				<a id="test" class="list-group-item editableList" data-value={{objectId}} onclick="linkToServicePage(this.getAttribute('data-value'))" ><font>{{name}}</font>
+				<span class="pull-right">{{deadline}}</span></a>
 
      </script>
 
