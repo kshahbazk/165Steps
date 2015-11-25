@@ -68,8 +68,8 @@ document.write(
                "         <li class='dropdown'>"+
                 "          <a href='#' class='dropdown-toggle' data-toggle='dropdown'><b id='navBarName'>Name</b><span class='caret'></span></a>"+
                  "         <ul class='dropdown-menu' role='menu'>"+
-                  "          <li><a href='#'>Profile Page</a></li>"+
-                   "         <li><a href='#'>Manage Services</a></li>"+
+                  "          <li><a href='manageAccount.html'>Manage Account</a></li>"+
+
                     "        <li class='divider'></li>"+
                      "       <li><a href='#' onclick='logOut()'>Logout</a></li>"+
                       "    </ul>"+
