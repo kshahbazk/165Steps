@@ -4,7 +4,6 @@
 
 
     var services = [];
-var searchedWord = $("#searchTerm").val();
 
 function search() {
 
@@ -13,6 +12,8 @@ function search() {
     var ReturnedResults = Parse.Object.extend("service");
 
     var query = new Parse.Query(ReturnedResults);
+
+    query.contains("name", searchedWord);
 
     query.find({
         success: function(comments) {
