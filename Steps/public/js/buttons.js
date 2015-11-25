@@ -7,6 +7,7 @@ $(function(){
 	 	getRequestedServices();
 	 	getServices();
 	 }
+	 
 
 	 if(isLoggedIn)
 	 {
@@ -62,96 +63,7 @@ $(function(){
 	});
  });
 
- function savePost(){
 
-  var Post = Parse.Object.extend("Post");
-  var post = new Post();
-  var user = new Parse.User();
-
-  var title = $("#title").val();
-  var text = $("#text").val();
-
-  post.set("postTitle", title);
-  post.set("postText", text);
-  post.set("user", Parse.User.current());
-
-  post.save(null,{
-    success: function(){
-      console.log("saved!");
-      getPosts();
-    },
-    error: function(post, error){
-      console.log(error.message);
-
-    }
-  })
-}
-
-
- function getRequestedServices(){
-
-	var services = Parse.Object.extend("requestedServices");
-	var query = new Parse.Query(services);
-
-	query.equalTo("user", Parse.User.current());
-
-	query.find({
-    success: function (results){
-      $("#reqList").html("");
-      var template = Handlebars.compile($("#requested-post-template").html());
-      $(results).each(function (i,e){
-        var q = e.toJSON();
-
-        $("#reqList").append(template(q));
-      })
-
-    },
-    error: function(error){
-      console.log(error.message);
-    }
-  })
-
-}
-
-function getServices(){
-
-	var services = Parse.Object.extend("service");
-	var querySeller = new Parse.Query(services);
-	var queryBuyer = new Parse.Query(services);
-
-	querySeller.equalTo("serviceSeller", Parse.User.current());
-	queryBuyer.equalTo("serviceBuyer", Parse.User.current());
-
-	var mainQuery = Parse.Query.or(queryBuyer,querySeller);
-
-	mainQuery.find({
-    success: function (results){
-      $("#histList").html("");
-      var template = Handlebars.compile($("#history-post-template").html());
-      $(results).each(function (i,e){
-        var q = e.toJSON();
-        for (var i=0; i< results.length ; i++){
-        	var object = results[i];
-        	arrayForServicesId.push(object.id);
-        	console.log(object.id);
-        }
-
-        $("#histList").append(template(q));
-      })
-
-    },
-    error: function(error){
-      console.log(error.message);
-    }
-  })
-
-}
-
- function linkToServicePage(serviceId){
-	console.log(serviceId);
-	sessionStorage.setItem("serviceId", serviceId);
-	document.location.href = "servicePage.html";
-}
 
  function createServiceHistory(idString, link, desc, date){
 	 var c = document.createElement("a");
@@ -239,4 +151,74 @@ function sub(theID, theID2){
 	 $("#editBtnForPref").hide();
 	 $("#savePageBtn").hide();
 	 $("#editPageBtn").show();
+}
+
+
+// backend stuff
+
+
+
+ function getRequestedServices(){
+
+	var services = Parse.Object.extend("requestedServices");
+	var query = new Parse.Query(services);
+
+	query.equalTo("user", Parse.User.current());
+
+	query.find({
+    success: function (results){
+      $("#reqList").html("");
+      var template = Handlebars.compile($("#requested-post-template").html());
+      $(results).each(function (i,e){
+        var q = e.toJSON();
+
+        $("#reqList").append(template(q));
+      })
+
+    },
+    error: function(error){
+      console.log(error.message);
+    }
+  })
+
+}
+
+function getServices(){
+
+	var services = Parse.Object.extend("service");
+	var querySeller = new Parse.Query(services);
+	var queryBuyer = new Parse.Query(services);
+
+	querySeller.equalTo("serviceSeller", Parse.User.current());
+	queryBuyer.equalTo("serviceBuyer", Parse.User.current());
+
+	var mainQuery = Parse.Query.or(queryBuyer,querySeller);
+
+	mainQuery.find({
+    success: function (results){
+      $("#histList").html("");
+      var template = Handlebars.compile($("#history-post-template").html());
+      $(results).each(function (i,e){
+        var q = e.toJSON();
+        for (var i=0; i< results.length ; i++){
+        	var object = results[i];
+        	arrayForServicesId.push(object.id);
+        	console.log(object.id);
+        }
+
+        $("#histList").append(template(q));
+      })
+
+    },
+    error: function(error){
+      console.log(error.message);
+    }
+  })
+
+}
+
+ function linkToServicePage(serviceId){
+	console.log(serviceId);
+	sessionStorage.setItem("serviceId", serviceId);
+	document.location.href = "servicePage.html";
 }
