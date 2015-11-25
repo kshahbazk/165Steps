@@ -185,9 +185,21 @@
                                     <button class="controlbtn btn btn-primary" id="cancelSaveLastName">Cancel</button>
                                 </div>
                             </div>
+
+                            <p></P>
+                            <div class="row">
+                              <div class="col-md-6 col-sm-6" id="col_last">
+                                <span id = "phoneSpan" >Phone </span>
+                                  <input type="text" class="inputEdit form-control" id="inputPhone" placeholder="(888)555-4141" name="Phone" required>
+                                  <button class="btn "  id=editPhone>Edit</button>
+                                  <button class="controlbtn btn btn-primary" id="savePhone">Save</button>
+                                  <button class="controlbtn btn btn-primary" id="cancelSavePhone">Cancel</button>
+                              </div>
+                            </div>
                             <p></p>
                             <div id="emailInput" class="form-group has-feedback">
                               <span id="emailSpan">simba@pridelands.com</span>
+
 
                                 <span class="glyphicon glyphicon-remove form-control-feedback" style="top:0px;"></span>
                                 <span class="glyphicon glyphicon-ok form-control-feedback" style="top:0px;"></span>
@@ -205,10 +217,24 @@
 
                             <p></p>
 
-                            <input type="file" id="upload-file" name="file[]" />
+
+                            <div class="col-sm-3">
+                                   <img src="http://dreamatico.com/data_images/kitten/kitten-2.jpg"
+                                   alt="Generic placeholder thumbnail"
+                                   style="max-width:250px;max-height:250px;"
+                                   onMouseOver="" onMouseOut=""
+                                   class="thumbnail" id="profilePic" >
+                                      <!-- Start Picture Pop-up -->
+                                            <p></p>
+                                            <button  id="change-picture" class="btn">Change profile picture</button>
+                                            <input type="file" id="upload-file" name="file[]" style="margin-left:11px;"/>
+                                            <button class="controlbtn btn btn-primary" id="savePicture">Save</button>
+                                            <button class="controlbtn btn btn-primary" id="cancelSavePicture">Cancel</button>
+                                  </div>
+
                             <br>
                             <p id="editErrorMessage"></p>
-                            <button type="submit" class="btn btn-primary">Register</button>
+
                         </form>
                     </div>
                     <div id="errorMessage"></div>
@@ -236,7 +262,7 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/login.js"></script>
-  
+
     <script src="js/search.js"></script>
   </body>
 </html>
