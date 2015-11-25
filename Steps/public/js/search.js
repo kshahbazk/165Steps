@@ -2,6 +2,8 @@
  * Created by shahbazkhan on 11/23/15.
  */
 
+
+    var services = [];
 var searchedWord = $("#searchTerm").val();
 
 function search() {
@@ -12,12 +14,14 @@ function search() {
 
     var query = new Parse.Query(ReturnedResults);
 
-    query.whereMatches("name", "(" + searchedWord + ")", "i").find({
+    query.find({
         success: function(comments) {
-            // comments now contains the comments for myPost
+            for (var i = 0; i < comments.length; i++) {
+                // This does not require a network access.
+                 services.push(comments[i]);
+            }
         }
     });
-
 
 }
 

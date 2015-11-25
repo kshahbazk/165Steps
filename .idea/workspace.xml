@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27a4f9f8-8016-431f-b805-172b7fd9303b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Steps/public/createService.html" afterPath="$PROJECT_DIR$/Steps/public/createService.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Steps/public/index.html" afterPath="$PROJECT_DIR$/Steps/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Steps/public/js/createNavBar.js" afterPath="$PROJECT_DIR$/Steps/public/js/createNavBar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Steps/public/js/search.js" afterPath="$PROJECT_DIR$/Steps/public/js/search.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Steps/public/manageSerPage.html" afterPath="$PROJECT_DIR$/Steps/public/manageSerPage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Steps/public/searchResultsPage.html" afterPath="$PROJECT_DIR$/Steps/public/searchResultsPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Steps/public/servicePage.html" afterPath="$PROJECT_DIR$/Steps/public/servicePage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Steps/public/signUp.html" afterPath="$PROJECT_DIR$/Steps/public/signUp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Steps/public/userProfile.html" afterPath="$PROJECT_DIR$/Steps/public/userProfile.html" />
     </list>
     <ignored path="165Steps.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,7 +47,7 @@
       <file leaf-file-name="createNavBar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Steps/public/js/createNavBar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.0555556">
+            <state vertical-scroll-proportion="-0.2777778">
               <caret line="30" column="124" selection-start-line="30" selection-start-column="124" selection-end-line="30" selection-end-column="124" />
               <folding>
                 <marker date="1448356123000" expanded="true" signature="88:1457" placeholder="..." />
@@ -76,8 +68,8 @@
       <file leaf-file-name="searchResultsPage.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Steps/public/searchResultsPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4939759">
-              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+            <state vertical-scroll-proportion="1.6987952">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,10 +79,20 @@
         <entry file="file://$PROJECT_DIR$/Steps/public/js/search.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
               <folding>
                 <element signature="e#0#46#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Steps/public/js/createService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -435,14 +437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Steps/public/js/createService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.91343963">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Steps/public/createService.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6385542">
@@ -507,7 +501,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Steps/public/js/createNavBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0555556">
+        <state vertical-scroll-proportion="-0.2777778">
           <caret line="30" column="124" selection-start-line="30" selection-start-column="124" selection-end-line="30" selection-end-column="124" />
           <folding>
             <marker date="1448356123000" expanded="true" signature="88:1457" placeholder="..." />
@@ -524,10 +518,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Steps/public/js/createService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Steps/public/js/search.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
           <folding>
             <element signature="e#0#46#0" expanded="false" />
           </folding>
@@ -536,8 +538,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Steps/public/searchResultsPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4939759">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        <state vertical-scroll-proportion="1.6987952">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
