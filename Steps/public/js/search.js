@@ -2,33 +2,23 @@
  * Created by shahbazkhan on 11/23/15.
  */
 
+//
+//$(document).ready ( function(){
+//    alert('ok');
+//});​
 
-    var services = [];
+var searchedWord = $("#searchTerm").val();
 
-function getQuery() {
+Parse.Cloud.run('queryServices', { serviceQuery: searchedWord }, {
+    success: function(results) {
 
-    var searchedWord = $("#searchTerm").val();
+    },
+    error: function(error) {
+    }
+});
 
-    var ReturnedResults = Parse.Object.extend("service");
-
-    var query = new Parse.Query(ReturnedResults);
-
-    query.contains("name", searchedWord);
-
-    query.find({
-        success: function(services) {
-            for (var i = 0; i < services.length; i++) {
-                // This does not require a network access.
-                 services.push(comments[i]);
-            }
-        }
-    });
-
-}
 
 function writeResults() {
-
-
 
     return html;
 }
