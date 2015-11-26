@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27a4f9f8-8016-431f-b805-172b7fd9303b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Steps/public/js/search.js" afterPath="$PROJECT_DIR$/Steps/public/js/search.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Steps/public/searchResultsPage.html" afterPath="$PROJECT_DIR$/Steps/public/searchResultsPage.html" />
     </list>
     <ignored path="165Steps.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,39 +50,37 @@
             <state vertical-scroll-proportion="-0.2777778">
               <caret line="30" column="124" selection-start-line="30" selection-start-column="124" selection-end-line="30" selection-end-column="124" />
               <folding>
-                <marker date="1448356123000" expanded="true" signature="88:1457" placeholder="..." />
-                <marker date="1448356123000" expanded="true" signature="88:1778" placeholder="..." />
-                <marker date="1448356123000" expanded="true" signature="88:1779" placeholder="..." />
-                <marker date="1448356123000" expanded="true" signature="88:1800" placeholder="..." />
-                <marker date="1448356123000" expanded="true" signature="88:1863" placeholder="..." />
-                <marker date="1448356123000" expanded="true" signature="123:1457" placeholder="..." />
-                <marker date="1448356123000" expanded="true" signature="1787:1799" placeholder="..." />
-                <marker date="1448356123000" expanded="true" signature="1878:1894" placeholder="..." />
-                <marker date="1448356123000" expanded="true" signature="2045:4260" placeholder="..." />
-                <marker date="1448356123000" expanded="true" signature="2086:4237" placeholder="..." />
+                <marker date="1448412645000" expanded="true" signature="88:1457" placeholder="..." />
+                <marker date="1448412645000" expanded="true" signature="88:1778" placeholder="..." />
+                <marker date="1448412645000" expanded="true" signature="88:1779" placeholder="..." />
+                <marker date="1448412645000" expanded="true" signature="88:1800" placeholder="..." />
+                <marker date="1448412645000" expanded="true" signature="88:1863" placeholder="..." />
+                <marker date="1448412645000" expanded="true" signature="123:1457" placeholder="..." />
+                <marker date="1448412645000" expanded="true" signature="1787:1799" placeholder="..." />
+                <marker date="1448412645000" expanded="true" signature="1878:1894" placeholder="..." />
+                <marker date="1448412645000" expanded="true" signature="2045:4260" placeholder="..." />
+                <marker date="1448412645000" expanded="true" signature="2086:4237" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchResultsPage.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="searchResultsPage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Steps/public/searchResultsPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.6987952">
+            <state vertical-scroll-proportion="-6.0416665">
               <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="search.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Steps/public/js/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#46#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.6241458">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,8 +118,8 @@
         <option value="$PROJECT_DIR$/Steps/public/signUp.html" />
         <option value="$PROJECT_DIR$/Steps/public/userProfile.html" />
         <option value="$PROJECT_DIR$/Steps/public/js/createNavBar.js" />
-        <option value="$PROJECT_DIR$/Steps/public/js/search.js" />
         <option value="$PROJECT_DIR$/Steps/public/searchResultsPage.html" />
+        <option value="$PROJECT_DIR$/Steps/public/js/search.js" />
       </list>
     </option>
   </component>
@@ -240,7 +238,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../search-sort-and-pagination-angularjs" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
@@ -504,16 +502,16 @@
         <state vertical-scroll-proportion="-0.2777778">
           <caret line="30" column="124" selection-start-line="30" selection-start-column="124" selection-end-line="30" selection-end-column="124" />
           <folding>
-            <marker date="1448356123000" expanded="true" signature="88:1457" placeholder="..." />
-            <marker date="1448356123000" expanded="true" signature="88:1778" placeholder="..." />
-            <marker date="1448356123000" expanded="true" signature="88:1779" placeholder="..." />
-            <marker date="1448356123000" expanded="true" signature="88:1800" placeholder="..." />
-            <marker date="1448356123000" expanded="true" signature="88:1863" placeholder="..." />
-            <marker date="1448356123000" expanded="true" signature="123:1457" placeholder="..." />
-            <marker date="1448356123000" expanded="true" signature="1787:1799" placeholder="..." />
-            <marker date="1448356123000" expanded="true" signature="1878:1894" placeholder="..." />
-            <marker date="1448356123000" expanded="true" signature="2045:4260" placeholder="..." />
-            <marker date="1448356123000" expanded="true" signature="2086:4237" placeholder="..." />
+            <marker date="1448412645000" expanded="true" signature="88:1457" placeholder="..." />
+            <marker date="1448412645000" expanded="true" signature="88:1778" placeholder="..." />
+            <marker date="1448412645000" expanded="true" signature="88:1779" placeholder="..." />
+            <marker date="1448412645000" expanded="true" signature="88:1800" placeholder="..." />
+            <marker date="1448412645000" expanded="true" signature="88:1863" placeholder="..." />
+            <marker date="1448412645000" expanded="true" signature="123:1457" placeholder="..." />
+            <marker date="1448412645000" expanded="true" signature="1787:1799" placeholder="..." />
+            <marker date="1448412645000" expanded="true" signature="1878:1894" placeholder="..." />
+            <marker date="1448412645000" expanded="true" signature="2045:4260" placeholder="..." />
+            <marker date="1448412645000" expanded="true" signature="2086:4237" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -526,20 +524,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Steps/public/js/search.js">
+    <entry file="file://$PROJECT_DIR$/Steps/public/searchResultsPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-6.0416665">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Steps/public/searchResultsPage.html">
+    <entry file="file://$PROJECT_DIR$/Steps/public/js/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6987952">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6241458">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
