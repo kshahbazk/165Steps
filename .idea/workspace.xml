@@ -68,7 +68,7 @@
       <file leaf-file-name="searchResultsPage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Steps/public/searchResultsPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-29.375">
+            <state vertical-scroll-proportion="-6.0416665">
               <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
@@ -78,8 +78,8 @@
       <file leaf-file-name="search.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Steps/public/js/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17084283">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.6241458">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -238,7 +238,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../search-sort-and-pagination-angularjs" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
@@ -526,7 +526,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Steps/public/searchResultsPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.375">
+        <state vertical-scroll-proportion="-6.0416665">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
@@ -534,8 +534,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Steps/public/js/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17084283">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.6241458">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>

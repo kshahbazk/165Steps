@@ -5,7 +5,7 @@
 
     var services = [];
 
-function search() {
+function getQuery() {
 
     var searchedWord = $("#searchTerm").val();
 
@@ -16,8 +16,8 @@ function search() {
     query.contains("name", searchedWord);
 
     query.find({
-        success: function(comments) {
-            for (var i = 0; i < comments.length; i++) {
+        success: function(services) {
+            for (var i = 0; i < services.length; i++) {
                 // This does not require a network access.
                  services.push(comments[i]);
             }
@@ -25,4 +25,12 @@ function search() {
     });
 
 }
+
+function writeResults() {
+
+
+
+    return html;
+}
+
 
