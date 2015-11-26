@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 language: node_js
 node_js:
   - 0.10
+=======
+language: node_js
+node_js:
+  - 0.10
+>>>>>>> f59f9328c2c2b411a227fd35beca06450120e093
 install: npm install

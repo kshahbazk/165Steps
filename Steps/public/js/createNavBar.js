@@ -26,9 +26,9 @@ document.write(
                   "</ul>"+
                 "</li>"+
               "</ul>"+
-              "<form class='navbar-form navbar-left' role='search'>"+
+              "<form class='navbar-form navbar-left' role='search' action='searchResultsPage.html' id='search'>"+
                " <div class='form-group'>"+
-                "  <input type='text' class='form-control' placeholder='Search' style='width:400px;'>"+
+                "  <input type='text' class='form-control' placeholder='Search Services' style='width:400px;' id='searchTerm'>"+
                 "</div>"+
                 "<button style='margin-left:3px;' type='submit' class='btn btn-default'>Submit</button>"+
               "</form>"+
@@ -68,8 +68,8 @@ document.write(
                "         <li class='dropdown'>"+
                 "          <a href='#' class='dropdown-toggle' data-toggle='dropdown'><b id='navBarName'>Name</b><span class='caret'></span></a>"+
                  "         <ul class='dropdown-menu' role='menu'>"+
-                  "          <li><a href='#'>Profile Page</a></li>"+
-                   "         <li><a href='#'>Manage Services</a></li>"+
+                  "          <li><a href='manageAccount.html'>Manage Account</a></li>"+
+
                     "        <li class='divider'></li>"+
                      "       <li><a href='#' onclick='logOut()'>Logout</a></li>"+
                       "    </ul>"+

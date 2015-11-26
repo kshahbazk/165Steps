@@ -99,6 +99,43 @@
         
     <!-- End Stars Library -->
 
+    <!-- Start Stars Library
+    	Functions:
+
+        $('select').barrating('show');
+        Shows the rating widget.
+
+        $('select').barrating('set', value);
+        Sets the value of the rating widget.
+
+        $('select').barrating('readonly', state);
+        Switches the read-only state to true or false.
+
+        $('select').barrating('clear');
+        Clears the rating.
+
+        $('select').barrating('destroy');
+        Destroys the rating widget.
+         -->
+      <link rel="stylesheet" href="js/jquery-bar-rating/dist/themes/bootstrap-stars.css">
+
+      <script src="js/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+		<script type="text/javascript">
+           $(function() {
+              $('.bootStars').barrating({
+                theme: 'bootstrap-stars'
+              });
+
+			  $("#avgRating").barrating('readonly',true);
+			  $("#avgRating").barrating('set',3);
+
+			  $(".userRating").barrating('readonly',true);
+			  $(".userRating").barrating('set',3);
+           });
+        </script>
+
+    <!-- End Stars Library -->
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -119,7 +156,11 @@
 
         <div class="row" style="margin-left:15px; margin-right:15px; margin-top:20px;">
 
+<<<<<<< HEAD
 			
+=======
+
+>>>>>>> f59f9328c2c2b411a227fd35beca06450120e093
 
 
 			<div class="col-sm-3">
@@ -131,7 +172,11 @@
                 <!-- Start Picture Pop-up -->
                       <div class="modal fade" id="editPictureOpen" role="dialog">
                         <div class="modal-dialog" style="width:800px;">
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> f59f9328c2c2b411a227fd35beca06450120e093
                           <!-- Modal content-->
                           <div class="modal-content">
                             <div class="modal-header">
@@ -139,6 +184,7 @@
                               <h4 class="modal-title">Edit Picture</h4>
                             </div>
                             <div class="modal-body">
+<<<<<<< HEAD
                             
                             <input type="file" id="upload-file" name="file[]" style="margin-left:11px;"/>
                             <div class="form-group" style="margin-bottom:20px; margin-top:10px;">
@@ -154,6 +200,23 @@
                             </div>
                           </div>
                 
+=======
+
+                            <input type="file" id="upload-file" name="file[]" style="margin-left:11px;"/>
+                            <div class="form-group" style="margin-bottom:20px; margin-top:10px;">
+                              <div class="col-md-4 btn-group">
+                                <button type="submit" class="btn btn-primary" id="save-photo">Save</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                              </div>
+                            </div>
+
+                            </div>
+                            <div class="modal-footer" style="margin-top:20px;">
+
+                            </div>
+                          </div>
+
+>>>>>>> f59f9328c2c2b411a227fd35beca06450120e093
                         </div>
                       </div>
             </div>
@@ -164,21 +227,25 @@
 					$("#editPictureOpen").modal();
 				}
 			}
+<<<<<<< HEAD
 			
+=======
+
+>>>>>>> f59f9328c2c2b411a227fd35beca06450120e093
 			</script>
 
             <div class="col-sm-4" style="background-color:#FFF; height:210px; ">
 
                     <div class="caption-full">
 
-                        <h2 id="profileName">Simba the Ravager</h2>
+                        <h2 id="profileName" class="profileName">Simba the Ravager</h2>
 
                         <div>
                         	<div style="float:left; padding-right:4px; padding-top:3px;">
                                 <i class="glyphicon glyphicon-phone" style="font-size:1.2em;"></i>
                             </div>
                             <div class="text-left">
-                            	<p id="profileCellphone"><font size="4">(800) 548-8228</font></p>
+                            	<p id="profileCellphone" class"profileCellphone"><font size="4">(800) 548-8228</font></p>
                             </div>
                         </div>
 
@@ -187,7 +254,7 @@
                             	<i class="glyphicon glyphicon-envelope" style="font-size:1.2em;"></i>
                             </div>
                             <div class="text-left">
-                            	<p id="profileEmail"><font size="4">simba@pridelands.com</font></p>
+                            	<p id="profileEmail" class="profileEmail"><font size="4">simba@pridelands.com</font></p>
                             </div>
                         </div>
                         
@@ -259,6 +326,12 @@
 
 					
 
+                        <!-- Start Review Pop-up -->
+
+
+
+
+
 
                     </div>
                     <br>
@@ -274,7 +347,11 @@
                             </select>
                         </div>
                     </div>
+<<<<<<< HEAD
                     
+=======
+
+>>>>>>> f59f9328c2c2b411a227fd35beca06450120e093
                     <!--<div class="ratings">
                         <p class="pull-right">3 reviews</p>
                         <p>
@@ -287,7 +364,7 @@
                         </p>
                     </div>-->
             </div>
-            
+
             <div class="col-md-5">
                   <div class="bs-example">
                         <div class="panel panel-default" style="height:210px;">
@@ -308,7 +385,7 @@
                 </div><!-- /.col-lg-4 -->
          </div>
 
-                
+
      		 </div><!-- /.row -->
 
              <hr style="height:3px;border:none;color:#333;background-color:#969696; width:64%;" align="center" />
@@ -318,11 +395,19 @@
                     <div class="text-right">
                         <a class="btn btn-success" onClick="leaveTheReview()">Leave a Review</a>
                     </div>
+<<<<<<< HEAD
                     
                     <!-- Start Review Pop-up -->
                       <div class="modal fade" id="leaveReview" role="dialog">
                         <div class="modal-dialog" style="width:800px;">
                 
+=======
+
+                    <!-- Start Review Pop-up -->
+                      <div class="modal fade" id="leaveReview" role="dialog">
+                        <div class="modal-dialog" style="width:800px;">
+
+>>>>>>> f59f9328c2c2b411a227fd35beca06450120e093
                           <!-- Modal content-->
                           <div class="modal-content">
                             <div class="modal-header">
@@ -330,9 +415,15 @@
                               <h4 class="modal-title">Leave a Review</h4>
                             </div>
                             <div class="modal-body">
+<<<<<<< HEAD
                             
                                 <form class="form-horizontal" method="post" id="reviewForm">
                                 
+=======
+
+                                <form class="form-horizontal" method="post" id="reviewForm">
+
+>>>>>>> f59f9328c2c2b411a227fd35beca06450120e093
                                 <!-- Stars -->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="starsForReview">Rating</label>
@@ -346,7 +437,11 @@
                                         </select>
                                     </div>
                                 </div>
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> f59f9328c2c2b411a227fd35beca06450120e093
                                 <!-- Textarea -->
                                 <div class="form-group">
                                   <label class="col-md-4 control-label" for="reviewDescription">Description</label>
@@ -354,7 +449,11 @@
                                     <textarea class="form-control" id="reviewDescription" name="reviewDescription"></textarea>
                                   </div>
                                 </div>
+<<<<<<< HEAD
                                 
+=======
+
+>>>>>>> f59f9328c2c2b411a227fd35beca06450120e093
                                 <div class="form-group" style="padding-top:110px;">
                                   <label class="col-md-4 control-label" for="serviceSubmit"></label>
                                   <div class="col-md-4 btn-group">
@@ -362,6 +461,7 @@
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                                   </div>
                                 </div>
+<<<<<<< HEAD
                             
                             </div>
                             <div class="modal-footer" style="margin-top:130px;">
@@ -372,6 +472,18 @@
                         </div>
                       </div>
                       
+=======
+
+                            </div>
+                            <div class="modal-footer" style="margin-top:130px;">
+
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+>>>>>>> f59f9328c2c2b411a227fd35beca06450120e093
                       <script>
 						function leaveTheReview()
 						{
@@ -380,6 +492,7 @@
 							}
 						}
 						</script>
+<<<<<<< HEAD
                         
                         <!-- End Review Pop-up -->
                         
@@ -392,6 +505,20 @@
                     	<div class="col-md-12">
                         	Name
                         
+=======
+
+                        <!-- End Review Pop-up -->
+
+                    <hr>
+
+                    <div class="row" id="appendReviewsHere">
+
+                    <!-- Start Review Template -->
+
+                    	<div class="col-md-12">
+                        	Name
+
+>>>>>>> f59f9328c2c2b411a227fd35beca06450120e093
                         	<span class="pull-right">Date when posted</span>
                             <div class="br-wrapper br-theme-bootstrap-stars">
                                 <select class="bootStars userRating" id="userName">
@@ -404,9 +531,15 @@
                             </div>
                             <p>Description of review</p>
                         </div>
+<<<<<<< HEAD
                         
                         <br><br><br><hr style="width:98%;">
                         
+=======
+
+                        <br><br><br><hr style="width:98%;">
+
+>>>>>>> f59f9328c2c2b411a227fd35beca06450120e093
                         <!-- End Review Template -->
                     </div>
 

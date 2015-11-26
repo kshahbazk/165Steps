@@ -22,12 +22,12 @@
     <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
     <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
-    <script>
-		var isUser = false;
-		var isLoggedIn = false;
+    <script type="text/javascript">
+        var isLoggedIn;
+        var isUser = true;
+        var count = 0;
 
     </script>
-
     <style>
 
 		.has-success, .has-error {
@@ -69,10 +69,7 @@
   </head>
   <body>
   		<script src="js/createNavBar.js"></script>
-        <script>
-        	$(".ifNotLoggedIn").hide();
-			$(".ifLoggedIn").hide();
-        </script>
+        
 		<!--<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display --
@@ -216,5 +213,6 @@
     <script src="js/jquery.js"></script>
     <script src="js/login.js"></script>
     <script src="js/signUp.js"></script>
+        <script src="js/search.js.js"></script>
   </body>
 </html>

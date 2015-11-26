@@ -46,7 +46,14 @@ function checkUser(){
     $("#navBarName").html(user.get("firstName"));
 
     //change names in the profile page
-    $("#profilePic")[0].src = user.get("profileImage").url();
+    try {
+        $("#profilePic")[0].src = user.get("profileImage").url();
+    } catch (e) {
+      
+    } finally {
+
+    }
+
     $("#profileName").html(user.get("firstName")+" "+user.get("lastName"));
     $("#profileCellphone").html(user.get("cellphone"));
     $("#profileEmail").html(user.get("email"));
@@ -69,6 +76,7 @@ $(document).ready(function(){
 
 
 
+
 })
 
 function logOut() {
@@ -76,5 +84,6 @@ function logOut() {
   document.location.href = "index.html";
 
 }
+
 //exampleInputEmail2
 //exampleInputPassword2
