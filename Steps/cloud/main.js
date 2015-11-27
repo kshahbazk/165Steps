@@ -5,6 +5,23 @@ Parse.Cloud.define("hello", function(request, response) {
   response.success("Hello world!");
 });
 
+Parse.Cloud.define("queryServices", function(request, response) {
+
+  var query = new Parse.Query("service");
+
+  query.contains("name", request.param.serviceQuery);
+
+  query.find({
+    success: function(results) {
+
+      response.success(results);
+    },
+    error: function() {
+      response.error("Query Failed");
+    }
+  });
+});
+
 /*Parse.Cloud.beforeSave("service", function(request, response) {
 
   var _apiKey = "key-f630b4300fcb468b8791446715741d07";

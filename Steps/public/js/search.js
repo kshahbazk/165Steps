@@ -2,26 +2,32 @@
  * Created by shahbazkhan on 11/23/15.
  */
 
+//
+//$(document).ready ( function(){
+//    alert('ok');
+//});​
 
-    var services = [];
+
 var searchedWord = $("#searchTerm").val();
 
-function search() {
-
-    var searchedWord = $("#searchTerm").val();
-
-    var ReturnedResults = Parse.Object.extend("service");
-
-    var query = new Parse.Query(ReturnedResults);
-
-    query.find({
-        success: function(comments) {
-            for (var i = 0; i < comments.length; i++) {
-                // This does not require a network access.
-                 services.push(comments[i]);
-            }
+Parse.Cloud.run('queryServices', { serviceQuery: searchedWord }, {
+    success: function(results) {
+        alert("Successfully retrieved " + results.length + " results.");
+        // Do something with the returned Parse.Object values
+        for (var i = 0; i < results.length; i++) {
+            var object = results[i];
+            alert(object.id + ' - ' + object.get('name'));
         }
-    });
 
+    },
+    error: function(error) {
+    }
+});
+
+
+function writeResults() {
+
+    return html;
 }
+
 
