@@ -5,7 +5,7 @@ Parse.Cloud.define("hello", function(request, response) {
   response.success("Hello world!");
 });
 
-/*Parse.Cloud.beforeSave("service", function(request, response) {
+Parse.Cloud.beforeSave("service", function(request, response) {
 
   var _apiKey = "key-f630b4300fcb468b8791446715741d07";
   var _domainName = "sandbox849033cc1d2d4cac8be3884abbb52a4c.mailgun.org";
