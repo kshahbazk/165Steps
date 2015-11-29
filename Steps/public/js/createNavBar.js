@@ -26,9 +26,9 @@ document.write(
                   "</ul>"+
                 "</li>"+
               "</ul>"+
-              "<form class='navbar-form navbar-left' role='search' action='searchResultsPage.html' id='search'>"+
+              "<form class='navbar-form navbar-left' role='search' onsubmit='writeResults(searchTerm)' id='search'>"+
                " <div class='form-group'>"+
-                "  <input type='text' class='form-control' placeholder='Search Services' style='width:400px;' id='searchTerm'>"+
+                "  <input type='text' class='form-control' placeholder='Search Services' style='width:400px;' name='searchTerm' id='searchTerm'>"+
                 "</div>"+
                 "<button style='margin-left:3px;' type='submit' class='btn btn-default'>Submit</button>"+
               "</form>"+
