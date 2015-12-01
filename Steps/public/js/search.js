@@ -8,7 +8,11 @@
 //});​
 
 
-var searchedWord = $("#searchTerm").val();
+
+function writeResults(searchedWord) {
+// var searchedWord = $("#searchTerm").val();
+window.location = "searchResultsPage.html";
+console.log(searchedWord);
 
 Parse.Cloud.run('queryServices', { serviceQuery: searchedWord }, {
     success: function(results) {
@@ -25,9 +29,5 @@ Parse.Cloud.run('queryServices', { serviceQuery: searchedWord }, {
 });
 
 
-function writeResults() {
-
-    return html;
+    //return html;
 }
-
-
