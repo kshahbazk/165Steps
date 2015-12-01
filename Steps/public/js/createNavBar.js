@@ -21,7 +21,6 @@ document.write(
                  " <a href='#' class='dropdown-toggle' data-toggle='dropdown'>Service Options<span class='caret'></span></a>"+
                   "<ul class='dropdown-menu' role='menu'>"+
                     "<li><a href='createService.html'>Create Service</a></li>"+
-                    "<li><a href='#'>Edit Services</a></li>"+
                     "<li><a href='manageSerPage.html'>Manage Services</a></li>"+
                   "</ul>"+
                 "</li>"+
