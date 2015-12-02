@@ -10,14 +10,20 @@ function getServices () {
   Parse.Cloud.run('queryServices', { serviceQuery: searchedWord }, {
     success: function(results) {
       $("#services-result-list").html("");
+      console.log(results.length);
       var template = Handlebars.compile($("#services-result-template").html());
       $(results).each(function (i,e){
         var q = e.toJSON();
 
 
         $("#services-result-list").append(template(q));
+        console.log(q);
       })
+      if(results.length == 0){
+        console.log("no results");
+        $("#services-result-list").replaceWith( "<h2 style='text-align: center;'>No results for that search</h2>" );
 
+      }
 
       },
       error: function (error) {
