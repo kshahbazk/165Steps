@@ -19,6 +19,23 @@
 
 		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
     <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    
+    <link rel="stylesheet" href="js/jquery-bar-rating/dist/themes/bootstrap-stars.css">
+      
+      <script src="js/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+		<script type="text/javascript">
+           $(function() {
+              $('.bootStars').barrating({
+                theme: 'bootstrap-stars'
+              });
+			  
+			  $("#avgRating").barrating('readonly',true);
+			  $("#avgRating").barrating('set',3);
+			  
+			  $(".userRating").barrating('readonly',true);
+			  
+           });
+        </script>
 
 
     <style>
@@ -140,8 +157,79 @@ color: #999;
                 <div class="well" style="background-color:#FFF;">
 					<br><br>
                     <div class="text-right" style="padding-top:10px;">
-                        <a class="btn btn-success">Leave a Review</a>
+                        <a class="btn btn-success" onClick="leaveTheReview()">Leave a Review</a>
                     </div>
+
+					<!-- Start Review Pop-up -->
+                      <div class="modal fade" id="leaveReview" role="dialog">
+                        <div class="modal-dialog" style="width:800px;">
+                
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Leave a Review</h4>
+                            </div>
+                            <div class="modal-body">
+                            
+                                <form class="form-horizontal" method="post" id="reviewForm">
+                                
+                                <!-- Stars -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="starsForReview">Rating</label>
+                                    <div class="col-md-6 br-wrapper br-theme-bootstrap-stars" style="margin-top:10px;">
+                                        <select class="bootStars ratingTemp" id="formStars" omclick="setStars">
+                                          <option value="1">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                          <option value="4">4</option>
+                                          <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <script>
+                                function setStars()
+								{
+									$(".ratingTemp").barrating('set',$(".ratingTemp").val());
+								}
+                                </script>
+            
+                                <!-- Textarea -->
+                                <div class="form-group">
+                                  <label class="col-md-4 control-label" for="reviewDescription">Description</label>
+                                  <div class="col-md-6">
+                                    <textarea class="form-control" id="reviewDescription" name="reviewDescription"></textarea>
+                                  </div>
+                                </div>
+                                
+                                <div class="form-group" style="padding-top:110px;">
+                                  <label class="col-md-4 control-label" for="serviceSubmit"></label>
+                                  <div class="col-md-4 btn-group">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                  </div>
+                                </div>
+                            
+                            </div>
+                            <div class="modal-footer" style="margin-top:130px;">
+                
+                            </div>
+                          </div>
+                
+                        </div>
+                      </div>
+                      
+                      <script>
+						function leaveTheReview()
+						{
+							if(isLoggedIn){
+								$("#leaveReview").modal();
+							}
+						}
+						</script>
+                        
+                        <!-- End Review Pop-up -->
 
                     <hr>
 
@@ -210,9 +298,6 @@ color: #999;
 
     </div>
     <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
 
 
