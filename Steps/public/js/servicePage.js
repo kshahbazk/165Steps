@@ -26,12 +26,13 @@ function applyForTheJob(objectId){
 
 
 }
+
 function getService(objectId){
 
 	var Service = Parse.Object.extend("service");
 	var query = new Parse.Query(Service);
 
-	var user;
+
 
 	query.get(objectId, {
   success: function(service) {
@@ -39,8 +40,21 @@ function getService(objectId){
     $("#serviceName").html(service.get("name"));
     $("#serviceDescription").html(service.get("description"));
     $("#servicePrice").html("$"+service.get("price")+ ".00");
-    user = service.get("serviceSeller");
-    getUser(user);
+
+
+		var userx;
+
+		if(service.get("buying")){
+			userx = service.get("serviceBuyer");
+
+		}else{
+			userx = service.get("serviceSeller");
+
+		}
+		var userId = userx.id;
+		getUser(userId);
+		getApplicants(service);
+
 
   },
   error: function(object, error) {
@@ -52,22 +66,66 @@ function getService(objectId){
 });
 
 
-	return user;
+
 
 
 }
 
+function getApplicants (service) {
 
-function getUser(user) {
 
-	$("#userName").html(user.get("firstName"));
-	 $("#userEmail").html(user.get("email"));
+  var relation = service.relation("applicant");
+	var query = relation.query();
+
+
+
+
+
+
+  query.find({
+    success: function (results){
+      $("#applicant-list").html("");
+      var template = Handlebars.compile($("#applicant-template").html());
+      $(results).each(function (i,e){
+        var q = e.toJSON();
+
+
+        $("#applicant-list").append(template(q));
+      })
+
+    },
+    error: function(error){
+      console.log(error.message);
+    }
+  })
+}
+
+function getUser(userId) {
+
+	Parse.Cloud.run('getUserId', { objectId: userId }, {
+	    success: function(user) {
+
+	        // Do something with the returned Parse.Object values
+					//console.log(user.get("firstName"));
+					if(user == Parse.User.current()){
+						$("#apply-for-job").hide();
+					}
+					$("#userName").html(user.get("firstName") + " " + user.get("lastName"));
+					$("#userEmail").html(user.get("email"));
+
+	    },
+	    error: function(error) {
+				console.log(error.message);
+	    }
+	});
 
 }
 
 $(document).ready(function(){
 var id = 	sessionStorage.getItem("serviceId");
-var user = getService(id);
+getService(id);
+
+
 	//var qs = new Querystring();
 //	var v1 = qs.get("objectId");
 

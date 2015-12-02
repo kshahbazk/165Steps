@@ -43,6 +43,15 @@
 <body>
 <script src="js/createNavBar.js"></script>
 
+<div class="list-group scrollable-menu">
+    <div id="services-result-list" class="col-md-10" style="width:100%; padding:0px; margin:0px;">
+    <!-- Start Selling template -->
+    <!-- This is where the Selling List starts. -->
+
+  <!-- End Template -->
+
+    </div>
+</div>
 
 
 
@@ -67,8 +76,13 @@
 
 
 
+<script type="text/javascript">
 
 
+    Parse.initialize("iJgCVgcqKKWl5drVVV0pu8ztWaXHT6NB87dlgiq7", "ah5O4IvqZrTZcjUEEuioXpqZngnzbzATAOdg14pz");
+    //Parse.initialize("JE6mg7y9bSavnzvNIVWDIP3TJrTHQvgqMhdMQusW", "6XOmcuw8IttoPGuKLE9YgSAEADEGAbrpA1dAxT8hU");
+
+  </script>
 
 <script>$(".glyphicon").hide();</script>
 <!-- FOOTER -->
@@ -79,13 +93,22 @@
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
+<script type="text/x-handlebars-template" id="services-result-template">
 
-<script type="text/javascript">
 
-    Parse.initialize("iJgCVgcqKKWl5drVVV0pu8ztWaXHT6NB87dlgiq7", "ah5O4IvqZrTZcjUEEuioXpqZngnzbzATAOdg14pz");
-</script>
-<script src="js/buttons.js"></script>
-<script src="js/jquery.js"></script>
-<script src="js/search.js"></script>
+              <!-- Feed Entry -->
+              <a id="test" class="list-group-item editableList" data-value={{objectId}} onclick="linkToServicePage(this.getAttribute('data-value'))" ><font>{{name}}</font>
+            <span class="pull-right">${{price}}</span></a>
+
+              </script>
+<script type="text/x-handlebars-template" id="history-post-template">
+
+
+
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/searchTest.js"></script>
+  <script src="js/handlebars.js"></script>
 </body>
 </html>
