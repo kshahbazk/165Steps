@@ -163,10 +163,10 @@
     </nav>-->
 
     <!-- Page Content -->
-
+<div class="container">
 	<h1>Pending Payments</h1>
 
-	<div class="shopping-cart">
+	<div class="shopping-cart" id="paymentTable">
 
 	  <div class="column-labels">
 	    <label class="service-profilepicture">Image</label>
@@ -177,9 +177,11 @@
 	    <label class="service-line-price">Pay</label>
 	  </div>
 
+	<!-- Template -->
+
 	  <div class="service">
 	    <div class="service-profilepicture">
-	      <img src="http://dreamatico.com/data_images/kitten/kitten-2.jpg">
+	      <img class="pull-left" src="http://dreamatico.com/data_images/kitten/kitten-2.jpg">
 	    </div>
 	    <div class="service-details">
 	      <div class="service-title">Simba The Destroyer</div>
@@ -188,16 +190,20 @@
 	    <div class="service-price">20.00</div>
 	    <div class="service-quantity">11/28/2015
 	    </div>
-	    <div class="service-line-price">
-	    	<button class="pay-service">
-		    	Pay Now
-	    	</button>
+	    <div class="service-line-price pull-right" style="margin-right:30px;">
+	    	<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="TAW7CL2KS288J">
+                <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png" 
+                border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
 	    </div>
 	  </div>
 
 	  <div class="service">
 	    <div class="service-profilepicture">
-	      <img src="http://dreamatico.com/data_images/kitten/kitten-2.jpg">
+	      <img class="pull-left" src="http://dreamatico.com/data_images/kitten/kitten-2.jpg">
 	    </div>
 	    <div class="service-details">
 	      <div class="service-title">Some Guy</div>
@@ -205,15 +211,21 @@
 	    </div>
 	    <div class="service-price">10.00</div>
 	    <div class="service-quantity">12/1/2015</div>
-	    <div class="service-line-price">
-	    	<button class="pay-service">
-				Pay Now
-	      	</button>
+	    <div class="service-line-price pull-right" style="margin-right:30px;"> 
+	    	<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="TJVJDWGU8LW2N">
+                <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png" 
+                border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			</form>
 	    </div>
 	  </div>
 
-	      <button class="cancelbutton">Cancel</button>
-
+	</div>
+    
+    <!-- End Template -->
+    
 </div>
     <!-- /.container -->
 
@@ -222,11 +234,56 @@
 
     <!-- Bootstrap Core JavaScript
     <script src="js/bootstrap.min.js"></script>-->
-    <script type="text/x-handlebars-template" id="requested-post-template">
+    <script type="text/x-handlebars-template" id="paymentTable">
 
 
-									<!-- Feed Entry -->
-									<a id={{name}} class="list-group-item editableList" href="#"><font>{{description}}</font></a>
+									<!-- service listing -->
+									<div class="service">
+										<div class="service-profilepicture">
+										  <img src={{imgurl}}>
+										</div>
+										<div class="service-details">
+										  <div class="service-title">{{name}}</div>
+										  <p class="service-description">{{serviceName}}</p>
+										</div>
+										<div class="service-price">{{price}}</div>
+										<div class="service-quantity">{{deadline}}</div>
+										<div class="service-line-price pull-right" style="margin-right:30px;">
+										<script>
+                                        if({{price}} == 10)
+										{
+											document.write(	'<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+												<input type="hidden" name="cmd" value="_s-xclick">
+												<input type="hidden" name="hosted_button_id" value="TJVJDWGU8LW2N">
+												<input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png" border="0" name="submit" 
+												alt="PayPal - The safer, easier way to pay online!">
+												<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+												</form>');
+										}
+										else if({{price}} == 20)
+										{
+											document.write(	'<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+												<input type="hidden" name="cmd" value="_s-xclick">
+												<input type="hidden" name="hosted_button_id" value="TAW7CL2KS288J">
+												<input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png" border="0" name="submit" 
+												alt="PayPal - The safer, easier way to pay online!">
+												<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+												</form>');
+										}
+										else
+										{
+											document.write('<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+												<input type="hidden" name="cmd" value="_s-xclick">
+												<input type="hidden" name="hosted_button_id" value="H53CJT8C6AH9W">
+												<input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png" border="0" name="submit" 
+												alt="PayPal - The safer, easier way to pay online!">
+												<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+												</form>');
+										}
+                                        </script>
+											
+										</div>
+									  </div>
 
 								  </script>
 

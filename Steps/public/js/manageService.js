@@ -36,7 +36,7 @@ function saveService(id){
   var name = $("#serviceName").val();
   var description = $("#serviceDescription").val();
   var deadline = ($("#month").val() + "/" + $("#day").val() + "/" + $("#year").val());
-  var price = $("#servicePrice").val();
+  var price = $(".servicePrice").val();
   query.get(id, {
     success: function(service) {
       // The object was retrieved successfully.

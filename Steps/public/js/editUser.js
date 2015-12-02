@@ -2,12 +2,12 @@ $(document).ready(function(){
   //alert();
   var user = Parse.User.current();
 
+	
   // settin actual user data
-  $("#firstNameSpan").html(user.get("firstName"));
-  $("#profilePic")[0].src = user.get("profileImage").url();
-  $("#lastNameSpan").html(user.get("lastName"));
-  $("#emailSpan").html(user.get("email"));
-  $("#phoneSpan").html(user.get("cellphone"));
+  //$("#firstNameSpan").val(user.get("firstName"));
+  //$("#profilePic")[0].src = user.get("profileImage").url();
+  $("#lastNameInput").val(user.get("lastName"));
+  $("#phoneSpan").val(user.get("cellphone"));
 
 
 
@@ -39,11 +39,11 @@ $(document).ready(function(){
       //change name span
       $("#firstNameSpan").html(user.get("firstName"));
       //control html elements visibility
-      $("#editFirstName").show();
+      /*$("#editFirstName").show();
       $("#firstNameSpan").show();
       $("#inputFirstName").hide();
       $("#saveFirstName").hide();
-      $("#cancelSaveFirstName").hide();
+      $("#cancelSaveFirstName").hide();*/
 
     })
   })
@@ -74,11 +74,11 @@ $(document).ready(function(){
       $("#lastNameSpan").html(user.get("lastName"));
 
       //control html elements visibiliyy
-      $("#editLastName").show();
+      /*$("#editLastName").show();
       $("#lastNameSpan").show();
       $("#inputLastName").hide();
       $("#saveLastName").hide();
-      $("#cancelSaveLastName").hide();
+      $("#cancelSaveLastName").hide();*/
     })
   })
 
@@ -109,11 +109,11 @@ $(document).ready(function(){
       $("#phoneSpan").html(user.get("Phone"));
 
       //control html elements visibiliyy
-      $("#editPhone").show();
+      /*$("#editPhone").show();
       $("#phoneSpan").show();
       $("#inputPhone").hide();
       $("#savePhone").hide();
-      $("#cancelSavePhone").hide();
+      $("#cancelSavePhone").hide();*/
     })
   })
 
@@ -142,11 +142,11 @@ $(document).ready(function(){
       e.preventDefault();
       savePassword();
 
-      $("#editPassword").show();
+      /*$("#editPassword").show();
       $("#passwordSpan").show();
       $(".inputEditPassword").hide();
       $("#savePassword").hide();
-      $("#cancelSavePassword").hide();
+      $("#cancelSavePassword").hide();*/
 
 
     })
@@ -178,11 +178,11 @@ $(document).ready(function(){
 
       $("#profilePic")[0].src = user.get("profileImage").url();
 
-      $("#upload-file").hide();
+      /*$("#upload-file").hide();
       $("#profilePic").show();
       $("#change-picture").show();
       $("#savePicture").hide();
-      $("#cancelSavePicture").hide();
+      $("#cancelSavePicture").hide();*/
 
     })
 

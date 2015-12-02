@@ -93,7 +93,7 @@
 			  $("#avgRating").barrating('set',3);
 			  
 			  $(".userRating").barrating('readonly',true);
-			  $(".userRating").barrating('set',3);
+			  
            });
         </script>
         
@@ -127,12 +127,12 @@
              alt="Generic placeholder thumbnail"
              style="max-width:250px;max-height:250px;"
              onMouseOver="" onMouseOut=""
-             class="thumbnail" id="profilePic" onClick="openEditPicture()">
+             class="thumbnail" id="profilePic">
                 <!-- Start Picture Pop-up -->
-                      <div class="modal fade" id="editPictureOpen" role="dialog">
+                     <!-- <div class="modal fade" id="editPictureOpen" role="dialog">
                         <div class="modal-dialog" style="width:800px;">
                 
-                          <!-- Modal content-->
+                          <!-- Modal content--
                           <div class="modal-content">
                             <div class="modal-header">
                               <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -156,6 +156,7 @@
                 
                         </div>
                       </div>
+                      -->
             </div>
             <script>
 			function openEditPicture()
@@ -190,16 +191,12 @@
                             	<p id="profileEmail"><font size="4">simba@pridelands.com</font></p>
                             </div>
                         </div>
-                        
-                        <div>
-                        	<button class="btn btn-default" onClick="editInfo()">Edit Info</button>
-                        </div>
-                        
+
                         <!-- Start Review Pop-up -->
-                      <div class="modal fade" id="editUserInfo" role="dialog">
+                      <!--<div class="modal fade" id="editUserInfo" role="dialog">
                         <div class="modal-dialog" style="width:800px;">
                 
-                          <!-- Modal content-->
+                          <!-- Modal content--
                           <div class="modal-content">
                             <div class="modal-header">
                               <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -209,7 +206,7 @@
                             
                             <form class="form-horizontal" method="post" id="editPersInfo">
         
-                            <!-- Textarea -->
+                            <!-- Textarea --
                             <div class="form-group">
                               <label class="col-md-4 control-label" for="changePhone">Change Phone Number</label>
                               <div class="col-md-6">
@@ -245,6 +242,8 @@
                             </div>
                           </div>
                 
+                		
+                
                         </div>
                       </div>
                       
@@ -257,14 +256,15 @@
 						}
 						</script>
 
-					
+						-->
 
 
                     </div>
                     <br>
                     <div class="ratings">
                     	<p class="pull-right"># reviews</p>
-                        <div class="br-wrapper br-theme-bootstrap-stars">
+                        <div class="br-wrapper br-theme-bootstrap-stars" id="avgRatingsforUser">
+                        
                             <select class="bootStars" id="avgRating">
                               <option value="1">1</option>
                               <option value="2">2</option>
@@ -272,6 +272,7 @@
                               <option value="4">4</option>
                               <option value="5">5</option>
                             </select>
+                            3.4 stars
                         </div>
                     </div>
                     
@@ -337,7 +338,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="starsForReview">Rating</label>
                                     <div class="col-md-6 br-wrapper br-theme-bootstrap-stars" style="margin-top:10px;">
-                                        <select class="bootStars userRating" id="formStars">
+                                        <select class="bootStars ratingTemp" id="formStars" omclick="setStars">
                                           <option value="1">1</option>
                                           <option value="2">2</option>
                                           <option value="3">3</option>
@@ -346,6 +347,13 @@
                                         </select>
                                     </div>
                                 </div>
+                                
+                                <script>
+                                function setStars()
+								{
+									$(".ratingTemp").barrating('set',$(".ratingTemp").val());
+								}
+                                </script>
             
                                 <!-- Textarea -->
                                 <div class="form-group">
@@ -440,6 +448,33 @@
                                     <!-- Feed Entry -->
    				<a id="test" class="list-group-item editableList" data-value={{objectId}} onclick="linkToServicePage(this.getAttribute('data-value'))" ><font>{{name}}</font>
 				<span class="pull-right">{{deadline}}</span></a>
+
+     </script>
+     
+     <script type="text/x-handlebars-template" id="history-post-template">
+
+                                    <!-- Feed Entry -->
+   				<div class="col-md-12">
+					{{reviewedBy}}
+				
+					<span class="pull-right">Date when posted</span>
+					<div class="br-wrapper br-theme-bootstrap-stars">
+						<select class="bootStars userRating" id={{reviewedBy}}>
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="3">3</option>
+						  <option value="4">4</option>
+						  <option value="5">5</option>
+						</select>
+					</div>
+					<p>{{review}}</p>
+				</div>
+				
+				<script>
+                $("#{{reviewedBy}}").barrating('set',{{rating}});
+                </script>
+				
+				<br><br><br><hr style="width:98%;">
 
      </script>
 

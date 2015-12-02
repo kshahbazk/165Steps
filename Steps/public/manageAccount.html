@@ -71,7 +71,6 @@
   		<script src="js/createNavBar.js"></script>
         <script>
         	$(".ifNotLoggedIn").hide();
-			$(".ifLoggedIn").hide();
         </script>
 		<!--<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
@@ -163,78 +162,52 @@
 
                     <div class="col-md-5 col-sm-6">
                         <h2>Manage Account</h2>
-                        <h5 id="signup_heading">Make your changes<h5>
 
-                        <form class="form-group" method="post" id="signUp">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6" id="col_first">
-                                    <span id = "firstNameSpan" >firstName </span>
+                        <form class="form-group" method="post" id="manAcc">
 
-                                    <input type="text" class="inputEdit form-control" autofocus id="inputFirstName" placeholder="First name" name="firstname" required>
-
-                                    <button class="btn "  id="editFirstName">Edit</button>
-                                    <button class="controlbtn btn btn-primary" id="saveFirstName">Save</button>
-                                    <button class="controlbtn btn btn-primary" id="cancelSaveFirstName">Cancel</button>
-
-                                </div>
-                                <div class="col-md-6 col-sm-6" id="col_last">
-                                  <span id = "lastNameSpan" >lastName </span>
-                                    <input type="text" class="inputEdit form-control" id="inputLastName" placeholder="Last name" name="lastname" required>
-                                    <button class="btn "  id=editLastName>Edit</button>
-                                    <button class="controlbtn btn btn-primary" id="saveLastName">Save</button>
-                                    <button class="controlbtn btn btn-primary" id="cancelSaveLastName">Cancel</button>
-                                </div>
+                            <div class="input-group col-md-6 col-sm-6" id="col_first">
+                                <input type="text" class="form-control" id="firstNameSpan" placeholder="First name" name="firstname" required>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success" type="button" id="saveFirstName">Save</button>
+                               </span>
                             </div>
-
-                            <p></P>
-                            <div class="row">
-                              <div class="col-md-6 col-sm-6" id="col_last">
-                                <span id = "phoneSpan" >Phone </span>
-                                  <input type="text" class="inputEdit form-control" id="inputPhone" placeholder="(888)555-4141" name="Phone" required>
-                                  <button class="btn "  id=editPhone>Edit</button>
-                                  <button class="controlbtn btn btn-primary" id="savePhone">Save</button>
-                                  <button class="controlbtn btn btn-primary" id="cancelSavePhone">Cancel</button>
-                              </div>
-                            </div>
-                            <p></p>
-                            <div id="emailInput" class="form-group has-feedback">
-                              <span id="emailSpan">simba@pridelands.com</span>
-
-
-                                <span class="glyphicon glyphicon-remove form-control-feedback" style="top:0px;"></span>
-                                <span class="glyphicon glyphicon-ok form-control-feedback" style="top:0px;"></span>
-
-                            </div>
-                            <span id = "passwordSpan" >Password ****** </span>
-                            <input type="password" class="inputEdit inputEditPassword form-control" id="inputPassword" placeholder="Password" name="password">
-                            <p></p>
-                            <input type="password" class="inputEdit inputEditPassword form-control" id="confirmPassword" placeholder="Confirm password" name="confirmpassword">
-                            <button class="btn"  id=editPassword>Edit</button>
-                            <p></p>
-                            <button class="controlbtn btn btn-primary" id="savePassword">Save</button>
-                            <button class="controlbtn btn btn-primary" id="cancelSavePassword">Cancel</button>
-                            <p></p>
-
-                            <p></p>
-
-
-                            <div class="col-sm-3">
-                                   <img src="http://dreamatico.com/data_images/kitten/kitten-2.jpg"
-                                   alt="Generic placeholder thumbnail"
-                                   style="max-width:250px;max-height:250px;"
-                                   onMouseOver="" onMouseOut=""
-                                   class="thumbnail" id="profilePic" >
-                                      <!-- Start Picture Pop-up -->
-                                            <p></p>
-                                            <button  id="change-picture" class="btn">Change profile picture</button>
-                                            <input type="file" id="upload-file" name="file[]" style="margin-left:11px;"/>
-                                            <button class="controlbtn btn btn-primary" id="savePicture">Save</button>
-                                            <button class="controlbtn btn btn-primary" id="cancelSavePicture">Cancel</button>
-                                  </div>
-
                             <br>
-                            <p id="editErrorMessage"></p>
-
+                        
+                            <div class="input-group col-md-6 col-sm-6" id="col_last">
+                                <input type="text" class="form-control" id="lastNameInput" placeholder="Last name" name="lastname" required>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success" type="button" id="saveLastName">Save</button>
+                               </span>
+                            </div>
+                            <br>
+                            
+                            <div class="input-group col-md-6 col-sm-6" id="col_phone">
+                                <input type="text" class="form-control" id="phoneSpan" placeholder="Phone Number" name="phonenumber" required>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success" type="button" id="savePhone">Save</button>
+                               </span>
+                            </div>
+                            <br>
+							
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password">
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password" name="confirmpassword">
+                                <span class="input-group-btn">
+                                        <button class="btn btn-success" type="button" id="savePassword">Save</button>
+                                </span>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <input type="file" id="upload-file" name="file[]" />
+                                <span class="input-group-btn">
+                                        <button class="btn btn-success" type="button" id="savePicture">Save</button>
+                                </span>
+                            <br>
+                            </div>
+                            <button type="submit" class="btn btn-primary" >Register</button>
                         </form>
                     </div>
                     <div id="errorMessage"></div>

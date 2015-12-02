@@ -22,6 +22,7 @@ document.write(
                   "<ul class='dropdown-menu' role='menu'>"+
                     "<li><a href='createService.html'>Create Service</a></li>"+
                     "<li><a href='manageSerPage.html'>Manage Services</a></li>"+
+					"<li><a href='PaymentPage.html'>Payment Page</a></li>"+
                   "</ul>"+
                 "</li>"+
               "</ul>"+
