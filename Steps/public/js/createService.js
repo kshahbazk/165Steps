@@ -12,6 +12,21 @@ function saveService(){
   service.set("description", description);
   service.set("deadline", deadline);
   service.set("price", price);
+  if (price==10){
+    service.set("ten", true);
+    service.set("twenty",false);
+    service.set("thirty", false);
+  }
+  if(price==20){
+    service.set("ten", false);
+    service.set("twenty",true);
+    service.set("thirty", false);
+  }
+  if(price==30){
+    service.set("ten", false);
+    service.set("twenty",false);
+    service.set("thirty", true);
+  }
   service.set("serviceState","open");
   if(document.getElementById('option1').checked){
     service.set("buying", true);
