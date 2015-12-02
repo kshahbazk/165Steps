@@ -7,7 +7,7 @@ $(function(){
 	 	getRequestedServices();
 	 	getServices();
 	 }
-	 
+
 
 	 if(isLoggedIn)
 	 {
@@ -203,7 +203,7 @@ function getServices(){
         for (var i=0; i< results.length ; i++){
         	var object = results[i];
         	arrayForServicesId.push(object.id);
-        	console.log(object.id);
+        	//console.log(object.id);
         }
 
         $("#histList").append(template(q));
@@ -220,5 +220,6 @@ function getServices(){
  function linkToServicePage(serviceId){
 	console.log(serviceId);
 	sessionStorage.setItem("serviceId", serviceId);
+	sessionStorage.setItem("currentUser", true);
 	document.location.href = "servicePage.html";
 }

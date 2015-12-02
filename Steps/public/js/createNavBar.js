@@ -26,7 +26,7 @@ document.write(
                   "</ul>"+
                 "</li>"+
               "</ul>"+
-              "<form class='navbar-form navbar-left' role='search' onsubmit='getInfo(searchTerm)' action ='searchResultsPage.html' id='search'>"+
+              "<form class='navbar-form navbar-left' role='search' onsubmit='getInfo(searchTerm)' action='searchResultsPage.html' id='search'>"+
                " <div class='form-group'>"+
                 "  <input type='text' class='form-control' placeholder='Search Services' style='width:400px;' name='searchTerm' id='searchTerm'>"+
                 "</div>"+

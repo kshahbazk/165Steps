@@ -1,9 +1,10 @@
 function getInfo(searchWord){
   sessionStorage.myValue = $("#searchTerm").val();
+  //document.location.href = "searchResultsPage.html";
 
 }
 function getServices () {
-  
+
   var searchedWord = sessionStorage.myValue;
   console.log(searchedWord);
   Parse.Cloud.run('queryServices', { serviceQuery: searchedWord }, {
@@ -55,6 +56,7 @@ function getServices () {
 function linkToServicePage(serviceId){
  console.log(serviceId);
  sessionStorage.setItem("serviceId", serviceId);
+ sessionStorage.setItem("currentUser", false);
  document.location.href = "servicePage.html";
 }
 
