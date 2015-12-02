@@ -29,21 +29,23 @@
     <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
 	<link rel="stylesheet" href="js/jquery-bar-rating/dist/themes/bootstrap-stars.css">
-      
-      <script src="js/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
-		<script type="text/javascript">
-           $(function() {
-              $('.bootStars').barrating({
-                theme: 'bootstrap-stars'
-              });
-			  
-			  $("#avgRating").barrating('readonly',true);
-			  $("#avgRating").barrating('set',3);
-			  
-			  $(".userRating").barrating('readonly',true);
-			  
-           });
-        </script>
+	<script src="js/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+
+
+	<script type="text/javascript">
+				 $(function() {
+						$('.bootStars').barrating({
+							theme: 'bootstrap-stars'
+						});
+
+		 $("#avgRating").barrating('readonly',true);
+		 $("#avgRating").barrating('set',3);
+
+		 $(".userRating").barrating('readonly',true);
+
+				 });
+			</script>
+
 
     <style>
         .glyphicon {  margin-bottom: 10px;margin-right: 10px;}
@@ -147,7 +149,7 @@
         <div class="col-md-5" style="margin-top:15px;">
 
             <div class="col-sm-6 col-md-4" style="margin-top:15px; background-color:#FFF;" >
-                <img src="http://dreamatico.com/data_images/kitten/kitten-2.jpg" alt="" class="img-rounded img-responsive" />
+                <img src="http://dreamatico.com/data_images/kitten/kitten-2.jpg" alt="" class="img-rounded img-responsive" id="profile-picture-service"/>
             </div>
             <div class="col-sm-6 col-md-8" style="margin-top:15px; background-color:#FFF;" >
                 <h4 id="userName">Simba the Ravager</h4>
@@ -166,11 +168,11 @@
                 <div class="text-right" style="padding-top:10px;">
                     <a class="btn btn-success" onClick="openWriteReview()">Leave a Review</a>
                 </div>
-                
+
                 <!-- Start Modal -->
                   <div class="modal fade" id="writeReview" role="dialog">
                     <div class="modal-dialog" style="width:800px;">
-            
+
                       <!-- Modal content-->
                       <div class="modal-content">
                         <div class="modal-header">
@@ -178,7 +180,7 @@
                           <h4 class="modal-title">Leave a Review</h4>
                         </div>
                         <div class="modal-body">
-            
+
             			  <div class="row">
             				<label class="col-md-4 control-label" for="serviceDescription">Rating</label>
                             <div class="ratings col-md-6">
@@ -189,62 +191,53 @@
                                       <option value="3">3</option>
                                       <option value="4">4</option>
                                       <option value="5">5</option>
-                                    </select>   
+                                    </select>
                                 </div>
                             </div>
-                            
+
                             <label class="col-md-4 control-label" for="serviceDescription">Description</label>
                               <div class="col-md-6">
                                 <textarea class="form-control" id="serviceDescription" name="serviceDescription"></textarea>
                               </div>
-            
+
             				  <label class="col-md-4 control-label" for="serviceSubmit"></label>
                                   <div class="col-md-4 btn-group">
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                                   </div>
-                              
-                              
+
+
                             </div>
-                               
-                                            
+
+
                         </div>
                         <div class="modal-footer" style="bottom:50px;">
-            				
+
                         </div>
                       </div>
                    </div>
                 </div>
-                
+
                 <script>
                 function openWriteReview()
 				{
-					$("#writeReview").modal();	
+					$("#writeReview").modal();
 				}
                 </script>
 
                 <hr>
 
-                <!-- Start Review Template --> 
-                    
-                    	<div class="col-md-12">
-                        	Name
-                        
-                        	<span class="pull-right">Date when posted</span>
-                            <div class="br-wrapper br-theme-bootstrap-stars">
-                                <select class="bootStars userRating" id="userName">
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                  <option value="4">4</option>
-                                  <option value="5">5</option>
-                                </select>
-                            </div>
-                            <p>Description of review</p>
-                        </div>
-                        
-                        <br><br><br><hr style="width:98%;">
-                        
+                <!-- Start Review Template -->
+								<div class="list-group scrollable-menu">
+										<div class="col-md-10" style="width:100%; padding:0px; margin:0px;" id="main-review-list">
+
+										</div>
+								</div>
+
+
+
+
+
                         <!-- End Review Template -->
 
             </div>
@@ -311,74 +304,44 @@
 <!-- /.container -->
 
 <div class="modal fade" id="user_modal"tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <div class="col-sm-6 col-md-4" style="margin-top:15px; background-color:#FFF;" >
-                    <img src="http://dreamatico.com/data_images/kitten/kitten-2.jpg" alt="" class="img-rounded img-responsive" />
-                </div>
-                <h4 id = "modalName" class="modal-title">Edwin Mak</h4>
-                <p>
-                    <i class="glyphicon glyphicon-envelope" ></i><span id="email">simba@pridelands.com</span>
-                    <br />
-                    <i class="glyphicon glyphicon-phone" id="cellphone"></i>
-                    <br />
-                </p>
-            </div>
-            <div class="modal-body">
-                <hr>
+<div class="modal-dialog">
+<div class="modal-content">
+		<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" > User Information</h4>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                        Anonymous
-                        <span class="pull-right">10 days ago</span>
-                        <p>This product was great in terms of quality. I would definitely buy another!</p>
-                    </div>
-                </div>
 
-                <hr>
+		</div>
+		<div class="modal-body">
+			<div class= "row" >
+				<div class="col-sm-6 col-md-4" style="margin-top:15px; background-color:#FFF;" >
+						<img src="http://dreamatico.com/data_images/kitten/kitten-2.jpg" alt="" class="img-rounded img-responsive" id="popup-profileImage"/>
+				</div>
+				<h4 id = "modalName" class="modal-title">Edwin Mak</h4>
+				<p>
+						<i class="glyphicon glyphicon-envelope" ></i><span id="email">simba@pridelands.com</span>
+						<br />
+						<i class="glyphicon glyphicon-phone" id="cellphone"></i>
+						<br />
+				</p>
+			</div>
+			<div class="row" style="width:100%; align:center;">
+				<div class="list-group scrollable-menu">
+							<div class="col-md-10" style="width:80%; padding:0px; margin:40px;" id="popup-review-list">
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                        Anonymous
-                        <span class="pull-right">12 days ago</span>
-                        <p>I've alredy ordered another one!</p>
-                    </div>
-                </div>
+							</div>
+				</div>
+			</div>
 
-                <hr>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                        Anonymous
-                        <span class="pull-right">15 days ago</span>
-                        <p>I've seen some better than this, but not at this price. I definitely recommend this item.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="contract_confirm">Confirm</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
+		</div>
+		<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" id="contract_confirm">Confirm</button>
+		</div>
+</div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
 
 
 
@@ -387,16 +350,15 @@
 <script type="text/javascript" src="js/handlebars.js"> </script>
 <script type="text/javascript" src="js/login.js"></script>
 <script src="js/buttons.js"></script>
-
-<script type="text/x-handlebars-template" id="reviewEntryTable">
+<script type="text/x-handlebars-template" id="popup-review-template">
 
                                     <!-- Review Entries -->
    				<div class="col-md-12">
-					{{reviewedBy}}
-				
-					<span class="pull-right">Date when posted</span>
+					{{name}}
+
+					<span class="pull-right">11/11/2015</span>
 					<div class="br-wrapper br-theme-bootstrap-stars">
-						<select class="bootStars userRating" id={{reviewedBy}}>
+						<select class="bootStars userRating" id={{objectId}}>
 						  <option value="1">1</option>
 						  <option value="2">2</option>
 						  <option value="3">3</option>
@@ -406,14 +368,43 @@
 					</div>
 					<p>{{review}}</p>
 				</div>
-				
+
 				<script>
-                $("#{{reviewedBy}}").barrating('set',{{rating}});
+                $("#{{objectId}}").barrating('set','{{rating}}');
+
                 </script>
-				
+
 				<br><br><br><hr style="width:98%;">
 
-     </script>
+</script>
+<script type="text/x-handlebars-template" id="main-review-template">
+
+                                    <!-- Review Entries -->
+   				<div class="col-md-12">
+					{{name}}
+
+					<span class="pull-right">11/11/2015</span>
+					<div class="br-wrapper br-theme-bootstrap-stars">
+						<select class="bootStars userRating" id={{objectId}}>
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="3">3</option>
+						  <option value="4">4</option>
+						  <option value="5">5</option>
+						</select>
+					</div>
+					<p>{{review}}</p>
+				</div>
+
+				<script>
+                $("#{{objectId}}").barrating('set','{{rating}}');
+
+        <{{!}}/script>
+
+				<br><br><br><hr style="width:98%;">
+
+</script>
+
 
 <script type="text/x-handlebars-template" id="applicant-template">
 

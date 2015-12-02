@@ -77,11 +77,6 @@ function getApplicants (service) {
   var relation = service.relation("applicant");
 	var query = relation.query();
 
-
-
-
-
-
   query.find({
     success: function (results){
       $("#applicant-list").html("");
@@ -113,12 +108,33 @@ function populateViewModal(userId) {
 			$("#cellphone").html(user.get("cellphone"));
 
 			try {
-				$("#profile-picture-service")[0].src = user.get("profileImage").url();
+				$("#popup-profileImage")[0].src = user.get("profileImage").url();
 			} catch (e) {
 
 			} finally {
 
 			}
+
+			var review = Parse.Object.extend("Review");
+			var query = new Parse.Query(review);
+			query.equalTo("reviewedFor", user);
+
+			query.find({
+				success: function (results){
+					$("#popup-review-list").html("");
+					var template = Handlebars.compile($("#popup-review-template").html());
+					$(results).each(function (i,e){
+						var q = e.toJSON();
+
+
+						$("#popup-review-list").append(template(q));
+					})
+
+				},
+				error: function(error){
+					console.log(error.message);
+				}
+			})
 
 		},
 		error: function(error) {
@@ -126,6 +142,7 @@ function populateViewModal(userId) {
 		}
 	});
 }
+
 
 function getUser(userId) {
 
@@ -137,6 +154,7 @@ function getUser(userId) {
 
 					$("#userName").html(user.get("firstName") + " " + user.get("lastName"));
 					$("#userEmail").html(user.get("email"));
+					$("#userCellphone").html(user.get("cellphone"));
 
 					try {
 			        $("#profile-picture-service")[0].src = user.get("profileImage").url();
@@ -145,6 +163,28 @@ function getUser(userId) {
 			    } finally {
 
 			    }
+
+					var review = Parse.Object.extend("Review");
+					var query = new Parse.Query(review);
+					query.equalTo("reviewedFor", user);
+
+					query.find({
+				    success: function (results){
+				      $("#main-review-list").html("");
+				      var template = Handlebars.compile($("#main-review-template").html());
+				      $(results).each(function (i,e){
+				        var q = e.toJSON();
+
+
+				        $("#main-review-list").append(template(q));
+				      })
+
+				    },
+				    error: function(error){
+				      console.log(error.message);
+				    }
+				  })
+
 
 	    },
 	    error: function(error) {
@@ -159,8 +199,8 @@ $(document).ready(function(){
 	var currentUser = sessionStorage.getItem("currentUser");
 	console.log("USUARIO"+currentUser);
 
-
 	
+
 
 
 	getService(id);
