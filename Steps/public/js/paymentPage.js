@@ -1,23 +1,36 @@
 $(document).ready(function(){
   //alert();
+
+getPayment();
+
+
+
+
+
+});
+
+function getPayment() {
   var user = Parse.User.current();
 
   var service = Parse.Object.extend("service");
 
   var query = new Parse.Query(service);
+  var query2 = new Parse.Query(service);
 
   query.equalTo("serviceBuyer", user);
-  query.equalTo("paymentState", "waiting");
+  query2.equalTo("paymentState", "waiting");
 
-  query.find({
+  var mainQuery = Parse.Query.or(query,query2);
+
+  mainQuery.find({
     success: function(results) {
-      $("#service").html("");
+      //$("#payment-list").html("");
       var template = Handlebars.compile($("#pymtable").html());
       $(results).each(function (i,e){
         var q = e.toJSON();
 
 
-        $("#pymtable").append(template(q));
+        $("#payment-list").append(template(q));
       })
 
 
@@ -26,10 +39,4 @@ $(document).ready(function(){
       console.log(error.message);
     }
   });
-
-
-
-
-
-
-});
+}
