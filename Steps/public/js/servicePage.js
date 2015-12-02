@@ -195,6 +195,7 @@ function populateViewModal(userId) {
 
 
 function getUser(userId) {
+	sessionStorage.setItem("userPage", userId);
 
 	Parse.Cloud.run('getUserId', { objectId: userId }, {
 	    success: function(user) {
@@ -219,8 +220,11 @@ function getUser(userId) {
 						console.log("same");
 						$("#apply-for-job").hide();
 						$("#user_confirm").show();
+
 					}else{
 						console.log("not same");
+						$("#leave-review2").attr("style","visibility:visible;");
+						$("#leave-review").show();
 						$("#apply-for-job").show();
 						$("#user_confirm").hide();
 					}
@@ -254,6 +258,36 @@ function getUser(userId) {
 	});
 
 }
+function leaveReview (){
+	var userId = sessionStorage.getItem("userPage");
+	var Review = Parse.Object.extend("Review")
+	var review = new Review();
+	//var query = new Parse.Query(review);
+
+
+
+	Parse.Cloud.run('getUserId', { objectId: userId }, {
+		success: function (user){
+			console.log( $("#service-description").val())
+			review.set("review", $("#service-description").val());
+
+			review.set("rating", parseInt($("#review-rating option:selected").val()));
+		//	alert();
+			review.set("reviewedBy", Parse.User.current());
+			//alert();
+			review.set("reviewedFor", user);
+			//alert();
+			review.save();
+			//alert();
+		},
+		error: function (user) {
+
+		}
+
+	});
+
+
+}
 
 $(document).ready(function(){
 	var id = 	sessionStorage.getItem("serviceId");
@@ -284,6 +318,11 @@ $(document).ready(function(){
 			applyForTheJobTwo(id);
 
 		})
+	});
+
+	$("#confirm-review").on("click", function(e){
+		e.preventDefault();
+		 leaveReview();
 	});
 
 
