@@ -6,7 +6,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="css/forms.css">
-    <script src="js/searchTest.js"></script>
+
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/paymentpage.css">
@@ -167,10 +167,14 @@
 <div class="container">
     <h1>Pending Payments</h1>
 
-    <div class="shopping-cart" id="paymentTable">
+    <div class="shopping-cart" id="payment-list">
+      <!--<div class="list-group scrollable-menu">
+          <div class="col-md-10" style="width:100%; padding:0px; margin:0px;" id="payment-list">
 
+          </div>
+      </div>--->
         <div class="column-labels">
-            <label class="service-profilepicture">Image</label>
+            <!-- <label class="service-profilepicture">Image</label> -->
             <label class="service-details">Service</label>
             <label class="service-price">Price</label>
             <label class="service-quantity">Due</label>
@@ -235,24 +239,54 @@
 
 <!-- Bootstrap Core JavaScript
 <script src="js/bootstrap.min.js"></script>-->
+
 <script type="text/x-handlebars-template" id="pymtable">
-
-
     <!-- service listing -->
     <div class="service">
-        <div class="service-profilepicture">
-            <img src={{imgurl}}>
-        </div>
+        <!-- <div class="service-profilepicture">
+            <img src={{profileImage}}>
+        </div> -->
         <div class="service-details">
             <div class="service-title">{{name}}</div>
-            <p class="service-description">{{serviceName}}</p>
+            <p class="service-description">{{description}}</p>
         </div>
         <div class="service-price">{{price}}</div>
         <div class="service-quantity">{{deadline}}</div>
         <div class="service-line-price pull-right" style="margin-right:30px;">
 
+          {{#if ten}}
 
-            <script>
+              <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="TJVJDWGU8LW2N">
+              <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png" border="0" name="submit"
+                     alt="PayPal - The safer, easier way to pay online!">
+              <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+              </form>
+
+          {{/if}}
+          {{#if twenty}}
+            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="TAW7CL2KS288J">
+            <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png" border="0" name="submit"
+                   alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+          {{/if}}
+          {{#if thirty}}
+            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="H53CJT8C6AH9W">
+            <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-medium.png" border="0" name="submit"
+                   alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+          {{/if}}
+
+
+
+            <!-- <script>
                 if({{price}} == 10)
                 {
                 document.write(	'<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -283,22 +317,25 @@
                 <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
             </form>');
                 }
-            </script>
+            </script> -->
 
             </div>
             </div>
 
 </script>
+
 
 <script type="text/javascript">
     Parse.initialize("iJgCVgcqKKWl5drVVV0pu8ztWaXHT6NB87dlgiq7", "ah5O4IvqZrTZcjUEEuioXpqZngnzbzATAOdg14pz");
     //Parse.initialize("JE6mg7y9bSavnzvNIVWDIP3TJrTHQvgqMhdMQusW", "6XOmcuw8IttoPGuKLE9YgSAEADEGAbrpA1dAxT8hU");
 </script>
 
-<script type="text/javascript" src="handlebars.js"> </script>
+<script type="text/javascript" src="js/handlebars.js"> </script>
 <script type="text/javascript" src="js/login.js"></script>
-<script src="js/buttons.js"></script>
+
 <script src="js/paymentPage.js"></script>
+
+
 </body>
 
 </html>
