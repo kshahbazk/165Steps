@@ -18,7 +18,7 @@ function getServices () {
         $("#services-result-list").append(template(q));
       })
       if(results.length == 0){
-        $("#services-result-list").replaceWith( "<h2 style='text-align: center;'>No results for that search</h2>" );
+        $("#services-result-list").replaceWith( "<h2 style='text-align: center;'>No results for " + searchedWord + "</h2>" );
 
       }
 
