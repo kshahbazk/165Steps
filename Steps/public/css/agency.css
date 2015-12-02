@@ -265,13 +265,14 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/sjsu.jpg);
+    /*background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/sjsu.jpg);*/
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    width: 100%;
 }
 
 header .intro-text {

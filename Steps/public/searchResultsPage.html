@@ -25,7 +25,11 @@
 
 
 
-
+ 	<script type="text/javascript">
+        var isLoggedIn;
+        var isUser = true;
+		
+    </script>
 
     <title>Search Results</title>
 
@@ -45,38 +49,16 @@
 <body>
 <script src="js/createNavBar.js"></script>
 
+<script>
+$(".ifNotLoggedIn").hide();
+</script>
+
 <div class="list-group scrollable-menu">
     <div id="services-result-list" class="col-md-10" style="width:100%; padding:0px; margin:0px;">
-    <!-- Start Selling template -->
-    <!-- This is where the Selling List starts. -->
 
-  <!-- End Template -->
 
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <script type="text/javascript">
 
@@ -104,12 +86,8 @@
 
               </script>
 <script type="text/x-handlebars-template" id="history-post-template">
-
-
-
-
-
-  <script src="js/jquery.js"></script>
+  <script src="js/buttons.js"></script>
+  <script src="js/login.js"></script>
   <script src="js/searchTest.js"></script>
   <script src="js/handlebars.js"></script>
 </body>
