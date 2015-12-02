@@ -276,20 +276,42 @@ We will provide these Communications to you by posting them on the PayPal websit
     </div><!-- /.modal -->
     <!-- /.container -->
 
+<div class="modal fade" id="user_modal"tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">{{firstName}}</h4>
+          </div>
+          <div class="modal-body">
+            Hi.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="contract_confirm">Confirm</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <script type="text/javascript" src="js/handlebars.js"> </script>
     <script type="text/javascript" src="js/login.js"></script>
     <script src="js/buttons.js"></script>
-<script type="text/x-handlebars-template" id="applicant-template">
+    <script type="text/x-handlebars-template" id="applicant-template">
+
+	<!-- Steppers Entry -->
+	<a id="test" class="list-group-item editableList" data-value={{objectId}}> <font>{{firstName}}</font><span class="pull-right">
+        <button id="apply-for-job" class="pull-right btn btn-success text-center" style="margin-top:3px; margin-right:3px;" data-toggle="modal" data-target="#user_modal">Add Yourself to the List!</button>{{reviewScore}}</span>
+    </a> 
+    
 
 
-									<!-- Steppers Entry -->
-									<a id="test" class="list-group-item editableList" data-value={{objectId}}  ><font>{{firstName}}</font>
-		            <span class="pull-right">{{reviewScore}}</span></a>
-
-
-								  </script>
+	</script>
 
     <script type="text/javascript">
 	      Parse.initialize("iJgCVgcqKKWl5drVVV0pu8ztWaXHT6NB87dlgiq7", "ah5O4IvqZrTZcjUEEuioXpqZngnzbzATAOdg14pz");
