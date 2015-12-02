@@ -113,7 +113,7 @@ color: #999;
                     <div class="panel panel-default">  <button id="apply-for-job" class="pull-right btn btn-success text-center" style="margin-top:3px; margin-right:3px;">Add Yourself to the List!</button>
                         <div class="panel-heading">List of Steppers Looking at this Service</div>
 
-                            <div id="listOfServ" class="list-group scrollable-menu first-menu" data-count="0">
+                            <div id="applicant-list" class="list-group scrollable-menu first-menu" data-count="0">
                                 <div class="col-md-10" style="width:100%; padding:0px; margin:0px;" id="list">
                                     <!-- Start list of Steppers here -->
 
@@ -228,11 +228,15 @@ color: #999;
         <script type="text/javascript" src="js/login.js"></script>
         <script src="js/buttons.js"></script>
 
-<script type="text/x-handlebars-template" id="requested-post-template">
+
+
+<script type="text/x-handlebars-template" id="applicant-template">
 
 
 									<!-- Steppers Entry -->
-									<a id={{name}} class="list-group-item editableList" href="#"><font>{{description}}</font></a>
+									<a id="test" class="list-group-item editableList" data-value={{objectId}}  ><font>{{firstName}}</font>
+		            <span class="pull-right">{{reviewScore}}</span></a>
+
 
 								  </script>
 
