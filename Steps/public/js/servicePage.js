@@ -107,12 +107,7 @@ function getUser(userId) {
 
 	        // Do something with the returned Parse.Object values
 					//console.log(user.get("firstName"));
-					if(user == Parse.User.current()){
 
-						console.log("same");
-						$("#apply-for-job").hide();
-
-					}
 					$("#userName").html(user.get("firstName") + " " + user.get("lastName"));
 					$("#userEmail").html(user.get("email"));
 
@@ -133,8 +128,15 @@ function getUser(userId) {
 }
 
 $(document).ready(function(){
-var id = 	sessionStorage.getItem("serviceId");
-getService(id);
+	var id = 	sessionStorage.getItem("serviceId");
+	var currentUser = sessionStorage.getItem("currentUser");
+	console.log("USUARIO"+currentUser);
+
+
+	
+
+
+	getService(id);
 
 
 	//var qs = new Querystring();

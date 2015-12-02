@@ -56,6 +56,7 @@ function getServices () {
 function linkToServicePage(serviceId){
  console.log(serviceId);
  sessionStorage.setItem("serviceId", serviceId);
+ sessionStorage.setItem("currentUser", false);
  document.location.href = "servicePage.html";
 }
 
