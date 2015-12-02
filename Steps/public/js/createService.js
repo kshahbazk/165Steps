@@ -12,6 +12,7 @@ function saveService(){
   service.set("description", description);
   service.set("deadline", deadline);
   service.set("price", price);
+  service.set("serviceState","open");
   if(document.getElementById('option1').checked){
     service.set("buying", true);
     service.set("serviceBuyer",Parse.User.current());
