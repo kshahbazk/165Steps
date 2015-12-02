@@ -5,12 +5,14 @@
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-      <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/forms.css">
       <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
       <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/landingPage.css" rel="stylesheet">
     <script type="text/javascript" src="js/search.js"></script>
+
     <title>Welcome to Steps</title>
+
 
     <script type="text/javascript">
         var isLoggedIn;
@@ -22,14 +24,18 @@
 
     <!-- Custom CSS -->
     <link href="css/shop-item.css" rel="stylesheet">
+    <link href="css/agency.css" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
   </head>
-  <body>
 
-
-
+  <body id="page-top" class="index">
     <script>
     if(isLoggedIn)
 	 {
@@ -43,111 +49,179 @@
 	 }
     </script>
     <script src="js/createNavBar.js"></script>
-    <!--<div class="header">
-      <div class="container">
-        <a href="#" class="logo-icon">
-          <img src="<!--logo--">
-        </a>
 
-        <ul class="menu">
-          <li><a href="#">Sign In</a></li>
-          <li><a href="#">Availible Jobs</a></li>
-          <li><a href="#">Create Posting</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle">More <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Advertisers</a></li>
-              <li><a href="#">How it works</a></li>
-              <li><a href="#">Support</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact us</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>-->
-
-
-    <div class="slider">
-
-      <div class="slide active-slide">
+    
+    <header>
         <div class="container">
-          <div class="row">
-            <div class="slide-copy col-xs-5">
-              <h1>Steps</h1>
-              <h2>Services Made Easy</h2>
-              <p>The one and only student posting site. Search for the postings to and start working now. Or create your own listing if you need something done.</p>
-
-              <a href="signUp.html">Sign up with your @sjsu.edu email account</a>
-
+            <div class="intro-text">
+                <div class="intro-lead-in">Services Made Easy</div>
+                <div class="intro-heading">Get your Job done.</div>
+                <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
             </div>
-            <div class="slide-img col-xs-7">
-              <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/home.png" width="540px">
-            </div>
-          </div>
         </div>
-      </div>
+    </header>
 
-      <div class="slide slide-feature">
+    <!-- Services Section -->
+    <section id="services">
         <div class="container">
-          <div class="row">
-            <div class="col-xs-12">
-              <a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/cnn.png"></a>
-              <a href="#">Read Now</a>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Services</h2>
+                    <h3 class="section-subheading text-muted">Easy as 1,2,3</h3>
+                </div>
             </div>
-
-          </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Transactions</h4>
+                    <p class="text-muted">Make transactions with service providers quickly and easily. </p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Review System </h4>
+                    <p class="text-muted">Our review system helps you make decisions on who to work with.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Secure</h4>
+                    <p class="text-muted">Transactions are secure and backed by our system.</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="slide">
+
+
+    <!-- Team Section -->
+    <section id="team" class="bg-light-gray">
         <div class="container">
-          <div class="row">
-            <div class="slide-copy col-xs-5">
-              <h1>Work at School</h1>
-              <h2>On your own Time</h2>
-              <p>Whether you have a few hours in between classes or you just want to pick up some extra cash, Steps makes it easy to make a few quick bucks on your own time. Simply register and start working!</p>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Our Amazing Team</h2>
+                    <h3 class="section-subheading text-muted">Software Engineers from SJSU</h3>
+                </div>
             </div>
-            <div class="slide-img col-xs-7">
-              <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/magazines.png">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Mohammed Gaggutur</h4>
+                        <p class="text-muted">Scrum Master</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Atif Khan</h4>
+                        <p class="text-muted">Product Owner</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Shahbaz Khan</h4>
+                        <p class="text-muted">Technical Architect</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">    
+                    <div class="team-member">
+                        <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Timothy Heflin</h4>
+                        <p class="text-muted">Developer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Fernando Abolafio</h4>
+                        <p class="text-muted">Developer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Edwin Mak</h4>
+                        <p class="text-muted">Developer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Anthony Pasero</h4>
+                        <p class="text-muted">Documenter/Tester</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-
-      <div class="slide">
-        <div class="container">
-          <div class="row">
-            <div class="slide-copy col-xs-5">
-              <h1>Dependable</h1>
-              <p>All users are SJSU affiliated, no strangers allowed.</p>
-              <ul class="get-app">
-                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ios.png"></a></li>
-                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/android.png"></a></li>
-                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/windows.png"></a></li>
-                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/blackberry.png"></a></li>
-              </ul>
-            </div>
-            <div class="slide-img col-xs-7">
-              <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/bw.png" width="540px">
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="slider-nav">
-      <a href="#" class="arrow-prev"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
-      <ul class="slider-dots">
-        <li class="dot active-dot">&bull;</li>
-        <li class="dot">&bull;</li>
-        <li class="dot">&bull;</li>
-        <li class="dot">&bull;</li>
-      </ul>
-      <a href="#" class="arrow-next"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
-     </div>
 
      <script src="js/createFooter.js"></script>
 
@@ -163,7 +237,6 @@
 	<script src="js/buttons.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/landingPage.js"></script>
-
 
 
 
