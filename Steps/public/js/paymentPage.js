@@ -8,7 +8,23 @@ getPayment();
 
 
 });
+function changePaymentState (objectId){
+  //alert();
+  var service = Parse.Object.extend("service");
 
+  var query = new Parse.Query(service);
+
+  query.get(objectId,{
+    success: function (service){
+
+      service.set("serviceState", "closed");
+      service.save();
+    },
+    error: function (error){
+      console.log(error.message);
+    }
+  });
+}
 function getPayment() {
   var user = Parse.User.current();
 

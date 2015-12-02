@@ -17,7 +17,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    
+
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
@@ -69,42 +69,42 @@
 
     <!-- Custom CSS -->
     <link href="css/shop-item.css" rel="stylesheet">
-    
+
     <!-- Start Stars Library
-    	Functions: 
+    	Functions:
 
         $('select').barrating('show');
         Shows the rating widget.
-        
+
         $('select').barrating('set', value);
         Sets the value of the rating widget.
-        
+
         $('select').barrating('readonly', state);
         Switches the read-only state to true or false.
-        
+
         $('select').barrating('clear');
         Clears the rating.
-        
+
         $('select').barrating('destroy');
         Destroys the rating widget.
          -->
       <link rel="stylesheet" href="js/jquery-bar-rating/dist/themes/bootstrap-stars.css">
-      
+
       <script src="js/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
 		<script type="text/javascript">
            $(function() {
               $('.bootStars').barrating({
                 theme: 'bootstrap-stars'
               });
-			  
+
 			  $("#avgRating").barrating('readonly',true);
 			  $("#avgRating").barrating('set',3);
-			  
+
 			  $(".userRating").barrating('readonly',true);
-			  
+
            });
         </script>
-        
+
     <!-- End Stars Library -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -127,7 +127,7 @@
 
         <div class="row" style="margin-left:15px; margin-right:15px; margin-top:20px;">
 
-			
+
 
 
 			<div class="col-sm-3">
@@ -136,7 +136,7 @@
              style="max-width:250px;max-height:250px;"
              onMouseOver="" onMouseOut=""
              class="thumbnail" id="profilePic">
-             
+
              <script>
 			 if(!notLoggedIn){
              	$("#profilePic").hide();
@@ -145,7 +145,7 @@
                 <!-- Start Picture Pop-up -->
                      <!-- <div class="modal fade" id="editPictureOpen" role="dialog">
                         <div class="modal-dialog" style="width:800px;">
-                
+
                           <!-- Modal content--
                           <div class="modal-content">
                             <div class="modal-header">
@@ -153,7 +153,7 @@
                               <h4 class="modal-title">Edit Picture</h4>
                             </div>
                             <div class="modal-body">
-                            
+
                             <input type="file" id="upload-file" name="file[]" style="margin-left:11px;"/>
                             <div class="form-group" style="margin-bottom:20px; margin-top:10px;">
                               <div class="col-md-4 btn-group">
@@ -161,13 +161,13 @@
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                               </div>
                             </div>
-                            
+
                             </div>
                             <div class="modal-footer" style="margin-top:20px;">
-                
+
                             </div>
                           </div>
-                
+
                         </div>
                       </div>
                       -->
@@ -179,7 +179,7 @@
 					$("#editPictureOpen").modal();
 				}
 			}
-			
+
 			</script>
 
             <div class="col-sm-4" style="background-color:#FFF; height:210px; ">
@@ -209,7 +209,7 @@
                         <!-- Start Review Pop-up -->
                       <!--<div class="modal fade" id="editUserInfo" role="dialog">
                         <div class="modal-dialog" style="width:800px;">
-                
+
                           <!-- Modal content--
                           <div class="modal-content">
                             <div class="modal-header">
@@ -217,9 +217,9 @@
                               <h4 class="modal-title">Edit Personal Info</h4>
                             </div>
                             <div class="modal-body">
-                            
+
                             <form class="form-horizontal" method="post" id="editPersInfo">
-        
+
                             <!-- Textarea --
                             <div class="form-group">
                               <label class="col-md-4 control-label" for="changePhone">Change Phone Number</label>
@@ -227,21 +227,21 @@
                                 <input class="form-control" id="changePhone" name="changePhone"></textarea>
                               </div>
                             </div>
-                            
+
                             <div class="form-group">
                               <label class="col-md-4 control-label" for="changePassword">Change Password</label>
                               <div class="col-md-6">
                                 <input type="password" class="form-control" id="changePassword" name="changePassword"></textarea>
                               </div>
                             </div>
-                            
+
                             <div class="form-group">
                               <label class="col-md-4 control-label" for="confirmPassword">Confirm Password</label>
                               <div class="col-md-6">
                                 <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"></textarea>
                               </div>
                             </div>
-                            
+
                             <div class="form-group" style="margin-bottom:20px; margin-top:10px;">
                               <label class="col-md-4 control-label" for="serviceSubmit"></label>
                               <div class="col-md-4 btn-group">
@@ -249,18 +249,18 @@
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                               </div>
                             </div>
-                            
+
                             </div>
                             <div class="modal-footer" style="margin-top:20px;">
-                
+
                             </div>
                           </div>
-                
-                		
-                
+
+
+
                         </div>
                       </div>
-                      
+
                       <script>
 						function editInfo()
 						{
@@ -278,7 +278,7 @@
                     <div class="ratings">
                     	<p class="pull-right"># reviews</p>
                         <div class="br-wrapper br-theme-bootstrap-stars" id="avgRatingsforUser">
-                        
+
                             <select class="bootStars" id="avgRating">
                               <option value="1">1</option>
                               <option value="2">2</option>
@@ -289,7 +289,7 @@
                             3.4 stars
                         </div>
                     </div>
-                    
+
                     <!--<div class="ratings">
                         <p class="pull-right">3 reviews</p>
                         <p>
@@ -302,7 +302,7 @@
                         </p>
                     </div>-->
             </div>
-            
+
             <div class="col-md-5">
                   <div class="bs-example">
                         <div class="panel panel-default" style="height:210px;">
@@ -323,7 +323,7 @@
                 </div><!-- /.col-lg-4 -->
          </div>
 
-                
+
      		 </div><!-- /.row -->
 
              <hr style="height:3px;border:none;color:#333;background-color:#969696; width:64%;" align="center" />
@@ -333,18 +333,18 @@
                     <div class="text-right">
                         <a class="btn btn-success" onClick="leaveTheReview()">Leave a Review</a>
                     </div>
-                    
-                    
-                        
+
+
+
                     <hr>
 
                     <div class="row" id="appendReviewsHere">
-                    
-                    <!-- Start Review Template --> 
-                    
+
+                    <!-- Start Review Template -->
+
                     	<div class="col-md-12">
                         	Name
-                        
+
                         	<span class="pull-right">Date when posted</span>
                             <div class="br-wrapper br-theme-bootstrap-stars">
                                 <select class="bootStars userRating" id="userName">
@@ -357,9 +357,9 @@
                             </div>
                             <p>Description of review</p>
                         </div>
-                        
+
                         <br><br><br><hr style="width:98%;">
-                        
+
                         <!-- End Review Template -->
                     </div>
 
@@ -372,11 +372,11 @@
 		<div class="container">
 
 			<script src="js/createFooter.js"></script>
-    
+
         </div>
 
 
-    
+
     <!-- /.container -->
 
     <!-- Bootstrap Core JavaScript
@@ -392,16 +392,16 @@
 
                                     <!-- Feed Entry -->
    				<a id="test" class="list-group-item editableList" data-value={{objectId}} onclick="linkToServicePage(this.getAttribute('data-value'))" ><font>{{name}}</font>
-				<span class="pull-right">{{deadline}}</span></a>
+				<span class="pull-right">{{serviceState}}</span></a>
 
      </script>
-     
+
      <script type="text/x-handlebars-template" id="history-post-template">
 
                                     <!-- Feed Entry -->
    				<div class="col-md-12">
 					{{reviewedBy}}
-				
+
 					<span class="pull-right">Date when posted</span>
 					<div class="br-wrapper br-theme-bootstrap-stars">
 						<select class="bootStars userRating" id={{reviewedBy}}>
@@ -414,11 +414,11 @@
 					</div>
 					<p>{{review}}</p>
 				</div>
-				
+
 				<script>
                 $("#{{reviewedBy}}").barrating('set',{{rating}});
                 </script>
-				
+
 				<br><br><br><hr style="width:98%;">
 
      </script>
