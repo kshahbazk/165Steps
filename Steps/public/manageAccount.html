@@ -60,7 +60,7 @@
     </style>
 
 
-    <title>Sign Up</title>
+    <title>Manage Account</title>
 
 
 
@@ -168,7 +168,7 @@
                             <div class="input-group col-md-6 col-sm-6" id="col_first">
                                 <input type="text" class="form-control" id="firstNameSpan" placeholder="First name" name="firstname" required>
                                 <span class="input-group-btn">
-                                    <button class="btn btn-success" type="button" id="saveFirstName">Save</button>
+                                    <button class="btn btn-success" type="button" id="saveFirstNameID" onClick="saveFirstName()">Save</button>
                                </span>
                             </div>
                             <br>
@@ -176,7 +176,7 @@
                             <div class="input-group col-md-6 col-sm-6" id="col_last">
                                 <input type="text" class="form-control" id="lastNameInput" placeholder="Last name" name="lastname" required>
                                 <span class="input-group-btn">
-                                    <button class="btn btn-success" type="button" id="saveLastName">Save</button>
+                                    <button class="btn btn-success" type="button" id="saveLastNameID" onClick="saveLastName()">Save</button>
                                </span>
                             </div>
                             <br>
@@ -184,7 +184,7 @@
                             <div class="input-group col-md-6 col-sm-6" id="col_phone">
                                 <input type="text" class="form-control" id="phoneSpan" placeholder="Phone Number" name="phonenumber" required>
                                 <span class="input-group-btn">
-                                    <button class="btn btn-success" type="button" id="savePhone">Save</button>
+                                    <button class="btn btn-success" type="button" id="savePhoneID" onClick="savePhone()">Save</button>
                                </span>
                             </div>
                             <br>
@@ -196,26 +196,31 @@
                             <div class="input-group">
                                 <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password" name="confirmpassword">
                                 <span class="input-group-btn">
-                                        <button class="btn btn-success" type="button" id="savePassword">Save</button>
+                                        <button class="btn btn-success" type="button" id="savePasswordID" onClick="savePassword()">Save</button>
                                 </span>
                             </div>
                             <br>
                             <div class="input-group">
                                 <input type="file" id="upload-file" name="file[]" />
                                 <span class="input-group-btn">
-                                        <button class="btn btn-success" type="button" id="savePicture">Save</button>
+                                        <button class="btn btn-success" type="button" id="savePictureID" onClick="savePicture()">Save</button>
                                 </span>
                             <br>
                             </div>
-                            <button type="submit" class="btn btn-primary" >Register</button>
+                            <button class="btn btn-success" type="button" onClick="saveFirstName();saveLastName();savePhone();savePassword();savePicture();">Save</button>
                         </form>
                     </div>
                     <div id="errorMessage"></div>
                 </div>
-
             </div>
-
         </div>
+        
+        <script>
+        function goToUser()
+		{
+				window.location.replace("userProfile.html");
+		}
+        </script>
 
 <script>$(".glyphicon").hide();</script>
               <!-- FOOTER -->

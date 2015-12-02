@@ -40,12 +40,14 @@ function checkEmail(){
 function checkUser(){
   if (Parse.User.current()){
     var user = Parse.User.current();
-
+	user.fetch();
     isLoggedIn = true;
     // change navbar name in the left
+
     $("#navBarName").html(user.get("firstName"));
 
     //change names in the profile page
+
     try {
         $("#profilePic")[0].src = user.get("profileImage").url();
     } catch (e) {

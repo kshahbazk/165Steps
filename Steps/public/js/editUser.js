@@ -4,13 +4,13 @@ $(document).ready(function(){
 
 	
   // settin actual user data
-  //$("#firstNameSpan").val(user.get("firstName"));
-  //$("#profilePic")[0].src = user.get("profileImage").url();
+  $("#firstNameSpan").val(user.get("firstName"));
   $("#lastNameInput").val(user.get("lastName"));
   $("#phoneSpan").val(user.get("cellphone"));
+  $("#savePicture")[0].src = user.get("profileImage").url();
 
 
-
+/*
   // html elements visibility controll
   $(".inputEdit").hide();
   $(".controlbtn").hide();
@@ -22,18 +22,18 @@ $(document).ready(function(){
     $("#editFirstName").hide();
     $("#firstNameSpan").hide();
     $("#inputFirstName").show();
-    $("#saveFirstName").show();
+    //$("#saveFirstName").show();
     $("#cancelSaveFirstName").show();
 
     $("#cancelSaveFirstName").on("click",function (){
       $("#editFirstName").show();
       $("#firstNameSpan").show();
       $("#inputFirstName").hide();
-      $("#saveFirstName").hide();
+      //$("#saveFirstName").hide();
       $("#cancelSaveFirstName").hide();
     })
 
-    $("#saveFirstName").on("click", function(e){
+    /*$("#saveFirstName").on("click", function(e){
       e.preventDefault();
       saveFirstName();
       //change name span
@@ -43,9 +43,9 @@ $(document).ready(function(){
       $("#firstNameSpan").show();
       $("#inputFirstName").hide();
       $("#saveFirstName").hide();
-      $("#cancelSaveFirstName").hide();*/
+      $("#cancelSaveFirstName").hide();*
 
-    })
+    })*
   })
 
   // ----LAST NAME saving controll----
@@ -78,7 +78,7 @@ $(document).ready(function(){
       $("#lastNameSpan").show();
       $("#inputLastName").hide();
       $("#saveLastName").hide();
-      $("#cancelSaveLastName").hide();*/
+      $("#cancelSaveLastName").hide();*
     })
   })
 
@@ -113,7 +113,7 @@ $(document).ready(function(){
       $("#phoneSpan").show();
       $("#inputPhone").hide();
       $("#savePhone").hide();
-      $("#cancelSavePhone").hide();*/
+      $("#cancelSavePhone").hide();*
     })
   })
 
@@ -146,7 +146,7 @@ $(document).ready(function(){
       $("#passwordSpan").show();
       $(".inputEditPassword").hide();
       $("#savePassword").hide();
-      $("#cancelSavePassword").hide();*/
+      $("#cancelSavePassword").hide();*
 
 
     })
@@ -182,18 +182,18 @@ $(document).ready(function(){
       $("#profilePic").show();
       $("#change-picture").show();
       $("#savePicture").hide();
-      $("#cancelSavePicture").hide();*/
+      $("#cancelSavePicture").hide();*
 
     })
 
-  });
+  });*/
 
 
 
 })
 
 function savePicture () {
-  alert();
+  //alert();
   var user = Parse.User.current();
   var value = false;
 
@@ -223,7 +223,7 @@ function savePicture () {
 function saveFirstName (){
   //alert();
   var user = Parse.User.current();
-  var firstName = $("#inputFirstName").val();
+  var firstName = $("#firstNameSpan").val();
   var value = false;
   user.set("firstName",firstName);
 
@@ -258,7 +258,7 @@ function saveFirstName (){
 
 function saveLastName () {
   var user = Parse.User.current();
-  var lastName = $("#inputLastName").val();
+  var lastName = $("#lastNameInput").val();
   var value = false;
   user.set("lastName",lastName);
 
@@ -278,7 +278,7 @@ function saveLastName () {
 
 function savePhone () {
   var user = Parse.User.current();
-  var  phone = $("#inputPhone").val();
+  var  phone = $("#phoneSpan").val();
   var value = false;
   user.set("cellphone", phone);
 
