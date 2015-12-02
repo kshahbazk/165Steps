@@ -100,6 +100,33 @@ function getApplicants (service) {
   })
 }
 
+function populateViewModal(userId) {
+
+	Parse.Cloud.run('getUserId', { objectId: userId }, {
+		success: function(user) {
+
+			// Do something with the returned Parse.Object values
+			//console.log(user.get("firstName"));
+
+			$("#modalName").html(user.get("firstName") + " " + user.get("lastName"));
+			$("#email").html(user.get("email"));
+			$("#cellphone").html(user.get("cellphone"));
+
+			try {
+				$("#profile-picture-service")[0].src = user.get("profileImage").url();
+			} catch (e) {
+
+			} finally {
+
+			}
+
+		},
+		error: function(error) {
+			console.log(error.message);
+		}
+	});
+}
+
 function getUser(userId) {
 
 	Parse.Cloud.run('getUserId', { objectId: userId }, {
