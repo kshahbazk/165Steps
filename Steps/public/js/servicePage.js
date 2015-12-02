@@ -4,6 +4,8 @@ function applyForTheJob(objectId){
 	var query = new Parse.Query(Service);
 
 
+
+
 	query.get(objectId, {
 	  success: function(service) {
 	    // The object was retrieved successfully.
@@ -13,6 +15,9 @@ function applyForTheJob(objectId){
 				service.set("sellerAccepted", true);
 			}else{
 				service.set("buyerAccepeted", true);
+			}
+			if(service.get("sellerAccepted") && service.get("buyerAccepeted")){
+				service.set("serviceState", "waiting");
 			}
 			service.save();
 		},
@@ -36,6 +41,9 @@ function applyForTheJob(objectId){
 				service.set("buyerAccepeted", true);
 			}else{
 				service.set("sellerAccepted", true);
+			}
+			if(service.get("sellerAccepted") && service.get("buyerAccepeted")){
+				service.set("serviceState", "waiting");
 			}
 
 			var userId = sessionStorage.getItem("userView");
