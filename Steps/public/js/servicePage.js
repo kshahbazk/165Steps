@@ -130,7 +130,7 @@ getService(id);
 //	var v1 = qs.get("objectId");
 
 	console.log("este e o id"+ id);
-	$("#apply-for-job").on("click", function () {
+	$("#contract_confirm").on("click", function () {
 		//alert();
 		applyForTheJob(id);
 	});
