@@ -1,360 +1,1 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-      <link rel="stylesheet" href="css/forms.css">
-			<script src="js/searchTest.js"></script>
-      <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
-      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-      <!-- Custom CSS -->
-    <link href="shop-item.css" rel="stylesheet">
-    <link href="css/agency.css" rel="styelsheet">
-
-    
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-
-
-    <style>
-.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
-
-small {
-display: block;
-line-height: 1.428571429;
-color: #999;
-}
-    </style>
-
-    <script type="text/javascript">
-        var isLoggedIn;
-        var isUser = false;
-        var count = 0;
-
-
-    </script>
-
-    <style>
-		.scrollable-menu {
-			height: auto;
-			max-height: 250px;
-			min-height: 250px;
-			overflow-x: hidden;
-		}
-
-		.wp-block.product {
-		  background: #fff;
-		  padding: 15px;
-		  margin-bottom: 20px;
-		  border: 2px solid #e0eded;
-		}
-
-		.maxmin {
-			max-height:200px;
-			min-height:200px;
-			height: 200px;
-		    overflow: hidden;
-		    overflow-y: auto;
-		}
-
-
-	</style>
-
-    <title>Service name</title>
-
-
-
-    <!-- Custom CSS -->
-    <link href="css/shop-item.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <script src="js/createNavBar.js"></script>
-
-    <!-- Page Content -->
-    <div class="container" style="background-color:#EAEAEA">
-
-        <div class="row">
-			<!-- Start left table -->
-            <div class="col-md-7">
-
-                <div class="thumbnail" style="margin-top:15px;">
-
-                    <div class="caption-full">
-                        <h4 class="pull-right" id="servicePrice">$30.00</h4>
-                        <h2 id="serviceName">Bring Books Across Campus</h2>
-                        <h3>Description</h3>
-                        <p id="serviceDescription">I need some books to be brought across campus into the CVB building. Meet me in the front of the building.</p>
-                </div>
-
-                <div class="bs-example">
-                    <div class="panel panel-default">  <button id="apply-for-job" class="pull-right btn btn-success text-center" style="margin-top:3px; margin-right:3px;" data-toggle="modal" data-target="#contract_modal">Add Yourself to the List!</button>
-                        <div class="panel-heading">List of Steppers Looking at this Service</div>
-
-                            <div id="applicant-list" class="list-group scrollable-menu first-menu" data-count="0">
-                                <div class="col-md-10" style="width:100%; padding:0px; margin:0px;" id="list">
-                                    <!-- Start list of Steppers here -->
-
-                                    <!-- End list -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-</div>
-
-
-            </div><!-- End left table -->
-
-            <!-- Start Right Table -->
-            <div class="col-md-5" style="margin-top:15px;">
-
-                <div class="col-sm-6 col-md-4" style="margin-top:15px; background-color:#FFF;" >
-                    <img src="http://dreamatico.com/data_images/kitten/kitten-2.jpg" alt="" class="img-rounded img-responsive" id="profile-picture-service" />
-                </div>
-                <div class="col-sm-6 col-md-8" style="margin-top:15px; background-color:#FFF;" >
-                    <h4 id="userName">Simba the Ravager</h4>
-
-                    <p>
-                        <i class="glyphicon glyphicon-envelope" ></i><span id="userEmail">simba@pridelands.com</span>
-                        <br />
-                        <i class="glyphicon glyphicon-phone" id="userCellphone"></i>(800) 548-8228
-                        <br />
-                     </p>
-
-                </div>
-
-                <div class="well" style="background-color:#FFF;">
-					<br><br>
-                    <div class="text-right" style="padding-top:10px;">
-                        <a class="btn btn-success">Leave a Review</a>
-                    </div>
-
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                            Anonymous
-                            <span class="pull-right">10 days ago</span>
-                            <p>This product was great in terms of quality. I would definitely buy another!</p>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                            Anonymous
-                            <span class="pull-right">12 days ago</span>
-                            <p>I've alredy ordered another one!</p>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                            Anonymous
-                            <span class="pull-right">15 days ago</span>
-                            <p>I've seen some better than this, but not at this price. I definitely recommend this item.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        </div><!-- End right table -->
-
-
-
-    </div>
-    <!-- /.container -->
-
-    <div class="container">
-
-        <hr>
-
-        <!-- Footer -->
-        <script src="js/createFooter.js"></script>
-
-    </div>
-
-    <!--Contract modal-->
-    <div class="modal fade" id="contract_modal"tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Terms & Conditions</h4>
-          </div>
-          <div class="modal-body">
-            <p>We may amend this Agreement at any time by posting a revised version on our website. The revised version will be effective at the time we post it. In addition, if the revised version includes a Substantial Change, we will provide you with 30 Days' prior notice of any Substantial Change by posting notice on the Policy Updates page of our website.
-
-            This is an important document which you must consider carefully when choosing whether to use the PayPal Services. Please be advised: This Agreement contains provisions that govern how legal claims you and we have against each other are resolved (see Section 14 “Disputes with PayPal” below). Those dispute-resolution provisions contain an Agreement to Arbitrate, which will, with limited exception, require you to submit claims you have against us to binding and final arbitration, unless you opt out of the Agreement to Arbitrate (see Section 14.3 "Agreement to Arbitrate") within 30 Days after the date you accept the User Agreement for the first time. Unless you opt out: (1) you will only be permitted to pursue claims against PayPal on an individual basis, not as a plaintiff or class member in any class or representative action or proceeding, and (2) you will only be permitted to seek relief (including monetary, injunctive, and declaratory relief) on an individual basis.
-
-            Please note the following risks of using the PayPal Services, which are set forth in more detail in the relevant sections of this Agreement:
-
-            Payments received in your Account may be reversed at a later time, for example, if such a payment is subject to a Chargeback, Reversal, Claim or is otherwise invalidated. This means that for some of our Sellers, payments received into their Account may be returned to the sender or otherwise removed from their Account after they have been paid and/or delivered any goods or services sold.
-
-            If you are a Seller, you can help protect yourself from the risk of a payment being reversed from your Account by following the criteria set out in the Protection for Sellers section and by following the other guidance provided in the Security page accessible via every page of the PayPal website.
-
-            We may close, suspend, or limit your access to your Account or the PayPal Services, and/or limit access to your Balance for up to 180 Days (or longer if pursuant to a court order or other legal process) if you violate this Agreement, the PayPal Acceptable Use Policy, any other agreement you enter into with PayPal, or as otherwise specified in this Agreement or other agreement you have entered into with PayPal. We may also use proprietary fraud and risk modeling when assessing the risk associated with your Account. If you wish to open a Dispute through PayPal's Online Resolution Center, you must do so within 180 Days of making your payment or initiating your transaction in the case of Pay After Delivery.
-
-            CONSUMER FRAUD WARNING: We’re always looking for ways to help keep you even more secure. So stay on the lookout for some of these common scams:
-
-            Spoofing – a scammer sends forged or faked electronic documents or emails falsely claiming to be PayPal or coming from PayPal but asks you to send money outside your PayPal account. 
-            Relative in Need – a scammer impersonates a family member (commonly grandchildren) and claims there is an emergency requiring you to send money.
-            Lottery or Prize – a scammer informs you that you’ve won a lottery or prize and must send money in order to claim it.
-            Debt Collection – a scammer impersonates a debt collector and induces you to send money using threats or intimidation.
-            Employment Related – a scammer instructs you to send money in connection with a fraudulent offer of employment.
-            Always use common sense when sending money. If something sounds too good to be true, it probably is. Only send money for yourself and not for others. Remember that if you don’t send the payment through your PayPal account, you’re not covered by PayPal Purchase Protection. Please let us know immediately if you believe someone is trying to scam or defraud you by contacting us at 1-888-221-1161 or 1-402-935-2050 if calling outside the U.S..
-
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" id="contract_confirm">Confirm</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    <!-- /.container -->
-
-<div class="modal fade" id="user_modal"tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <div class="col-sm-6 col-md-4" style="margin-top:15px; background-color:#FFF;" >
-                    <img src="http://dreamatico.com/data_images/kitten/kitten-2.jpg" alt="" class="img-rounded img-responsive" />
-                </div>
-            <h4 class="modal-title">Edwin Mak</h4>
-            <p>
-                        <i class="glyphicon glyphicon-envelope" ></i><span id="userEmail">simba@pridelands.com</span>
-                        <br />
-                        <i class="glyphicon glyphicon-phone" id="userCellphone"></i>(800) 548-8228
-                        <br />
-                     </p>
-          </div>
-          <div class="modal-body">
-            <hr>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                            Anonymous
-                            <span class="pull-right">10 days ago</span>
-                            <p>This product was great in terms of quality. I would definitely buy another!</p>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                            Anonymous
-                            <span class="pull-right">12 days ago</span>
-                            <p>I've alredy ordered another one!</p>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                            Anonymous
-                            <span class="pull-right">15 days ago</span>
-                            <p>I've seen some better than this, but not at this price. I definitely recommend this item.</p>
-                        </div>
-                    </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" id="contract_confirm">Confirm</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-
-
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/handlebars.js"> </script>
-    <script type="text/javascript" src="js/login.js"></script>
-    <script src="js/buttons.js"></script>
-    <script type="text/x-handlebars-template" id="applicant-template">
-
-	<!-- Steppers Entry -->
-	<a id="test" class="list-group-item editableList" data-value={{objectId}}> <font>{{firstName}}</font>
-        <button class="pull-center btn btn-success text-center" data-toggle="modal" data-target="#user_modal">View</button><span class="pull-right">{{reviewScore}}</span>
-    </a> 
-
-	</script>
-
-    <script type="text/javascript">
-	      Parse.initialize("iJgCVgcqKKWl5drVVV0pu8ztWaXHT6NB87dlgiq7", "ah5O4IvqZrTZcjUEEuioXpqZngnzbzATAOdg14pz");
-	      //Parse.initialize("JE6mg7y9bSavnzvNIVWDIP3TJrTHQvgqMhdMQusW", "6XOmcuw8IttoPGuKLE9YgSAEADEGAbrpA1dAxT8hU");
-
-	    </script>
-    <script src="js/search.js.js"></script>
-        <script type="text/javascript" src="js/servicePage.js"></script>
-
-</body>
-
-</html>
+<!DOCTYPE html><html lang="en"><head>    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">    <link rel="stylesheet" href="css/forms.css">    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">    <!-- Custom CSS -->    <link href="shop-item.css" rel="stylesheet">    <link href="css/agency.css" rel="styelsheet">    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>    <meta charset="utf-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1">    <meta name="description" content="">    <meta name="author" content="">    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>    <style>        .glyphicon {  margin-bottom: 10px;margin-right: 10px;}        small {            display: block;            line-height: 1.428571429;            color: #999;        }    </style>    <script type="text/javascript">        var isLoggedIn;        var isUser = false;        var count = 0;    </script>    <style>        .scrollable-menu {            height: auto;            max-height: 250px;            min-height: 250px;            overflow-x: hidden;        }        .wp-block.product {            background: #fff;            padding: 15px;            margin-bottom: 20px;            border: 2px solid #e0eded;        }        .maxmin {            max-height:200px;            min-height:200px;            height: 200px;            overflow: hidden;            overflow-y: auto;        }    </style>    <title>Service name</title>    <!-- Custom CSS -->    <link href="css/shop-item.css" rel="stylesheet">    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>    <![endif]--></head><body><script src="js/createNavBar.js"></script><!-- Page Content --><div class="container" style="background-color:#EAEAEA">    <div class="row">        <!-- Start left table -->        <div class="col-md-7">            <div class="thumbnail" style="margin-top:15px;">                <div class="caption-full">                    <h4 class="pull-right" id="servicePrice">$30.00</h4>                    <h2 id="serviceName">Bring Books Across Campus</h2>                    <h3>Description</h3>                    <p id="serviceDescription">I need some books to be brought across campus into the CVB building. Meet me in the front of the building.</p>                </div>                <div class="bs-example">                    <div class="panel panel-default">  <button id="apply-for-job" class="pull-right btn btn-success text-center" style="margin-top:3px; margin-right:3px;" data-toggle="modal" data-target="#contract_modal">Add Yourself to the List!</button>                        <div class="panel-heading">List of Steppers Looking at this Service</div>                        <div id="applicant-list" class="list-group scrollable-menu first-menu" data-count="0">                            <div class="col-md-10" style="width:100%; padding:0px; margin:0px;" id="list">                                <!-- Start list of Steppers here -->                                <!-- End list -->                            </div>                        </div>                    </div>                </div>            </div>        </div><!-- End left table -->        <!-- Start Right Table -->        <div class="col-md-5" style="margin-top:15px;">            <div class="col-sm-6 col-md-4" style="margin-top:15px; background-color:#FFF;" >                <img src="http://dreamatico.com/data_images/kitten/kitten-2.jpg" alt="" class="img-rounded img-responsive" />            </div>            <div class="col-sm-6 col-md-8" style="margin-top:15px; background-color:#FFF;" >                <h4 id="userName">Simba the Ravager</h4>                <p>                    <i class="glyphicon glyphicon-envelope" ></i><span id="userEmail">simba@pridelands.com</span>                    <br />                    <i class="glyphicon glyphicon-phone" id="userCellphone"></i>(800) 548-8228                    <br />                </p>            </div>            <div class="well" style="background-color:#FFF;">                <br><br>                <div class="text-right" style="padding-top:10px;">                    <a class="btn btn-success">Leave a Review</a>                </div>                <hr>                <div class="row">                    <div class="col-md-12">                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star-empty"></span>                        Anonymous                        <span class="pull-right">10 days ago</span>                        <p>This product was great in terms of quality. I would definitely buy another!</p>                    </div>                </div>                <hr>                <div class="row">                    <div class="col-md-12">                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star-empty"></span>                        Anonymous                        <span class="pull-right">12 days ago</span>                        <p>I've alredy ordered another one!</p>                    </div>                </div>                <hr>                <div class="row">                    <div class="col-md-12">                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star-empty"></span>                        Anonymous                        <span class="pull-right">15 days ago</span>                        <p>I've seen some better than this, but not at this price. I definitely recommend this item.</p>                    </div>                </div>            </div>        </div>    </div></div><!-- End right table --></div><!-- /.container --><div class="container">    <hr>    <!-- Footer -->    <script src="js/createFooter.js"></script></div><!--Contract modal--><div class="modal fade" id="contract_modal"tabindex="-1" role="dialog">    <div class="modal-dialog">        <div class="modal-content">            <div class="modal-header">                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                <h4 class="modal-title">Terms & Conditions</h4>            </div>            <div class="modal-body">                <p>We may amend this Agreement at any time by posting a revised version on our website. The revised version will be effective at the time we post it. In addition, if the revised version includes a Substantial Change, we will provide you with 30 Days' prior notice of any Substantial Change by posting notice on the Policy Updates page of our website.                    This is an important document which you must consider carefully when choosing whether to use the PayPal Services. Please be advised: This Agreement contains provisions that govern how legal claims you and we have against each other are resolved (see Section 14 “Disputes with PayPal” below). Those dispute-resolution provisions contain an Agreement to Arbitrate, which will, with limited exception, require you to submit claims you have against us to binding and final arbitration, unless you opt out of the Agreement to Arbitrate (see Section 14.3 "Agreement to Arbitrate") within 30 Days after the date you accept the User Agreement for the first time. Unless you opt out: (1) you will only be permitted to pursue claims against PayPal on an individual basis, not as a plaintiff or class member in any class or representative action or proceeding, and (2) you will only be permitted to seek relief (including monetary, injunctive, and declaratory relief) on an individual basis.                    Please note the following risks of using the PayPal Services, which are set forth in more detail in the relevant sections of this Agreement:                    Payments received in your Account may be reversed at a later time, for example, if such a payment is subject to a Chargeback, Reversal, Claim or is otherwise invalidated. This means that for some of our Sellers, payments received into their Account may be returned to the sender or otherwise removed from their Account after they have been paid and/or delivered any goods or services sold.                    If you are a Seller, you can help protect yourself from the risk of a payment being reversed from your Account by following the criteria set out in the Protection for Sellers section and by following the other guidance provided in the Security page accessible via every page of the PayPal website.                    We may close, suspend, or limit your access to your Account or the PayPal Services, and/or limit access to your Balance for up to 180 Days (or longer if pursuant to a court order or other legal process) if you violate this Agreement, the PayPal Acceptable Use Policy, any other agreement you enter into with PayPal, or as otherwise specified in this Agreement or other agreement you have entered into with PayPal. We may also use proprietary fraud and risk modeling when assessing the risk associated with your Account. If you wish to open a Dispute through PayPal's Online Resolution Center, you must do so within 180 Days of making your payment or initiating your transaction in the case of Pay After Delivery.                    CONSUMER FRAUD WARNING: We’re always looking for ways to help keep you even more secure. So stay on the lookout for some of these common scams:                    Spoofing – a scammer sends forged or faked electronic documents or emails falsely claiming to be PayPal or coming from PayPal but asks you to send money outside your PayPal account.                    Relative in Need – a scammer impersonates a family member (commonly grandchildren) and claims there is an emergency requiring you to send money.                    Lottery or Prize – a scammer informs you that you’ve won a lottery or prize and must send money in order to claim it.                    Debt Collection – a scammer impersonates a debt collector and induces you to send money using threats or intimidation.                    Employment Related – a scammer instructs you to send money in connection with a fraudulent offer of employment.                    Always use common sense when sending money. If something sounds too good to be true, it probably is. Only send money for yourself and not for others. Remember that if you don’t send the payment through your PayPal account, you’re not covered by PayPal Purchase Protection. Please let us know immediately if you believe someone is trying to scam or defraud you by contacting us at 1-888-221-1161 or 1-402-935-2050 if calling outside the U.S..                </p>            </div>            <div class="modal-footer">                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>                <button type="button" class="btn btn-primary" id="contract_confirm">Confirm</button>            </div>        </div><!-- /.modal-content -->    </div><!-- /.modal-dialog --></div><!-- /.modal --><!-- /.container --><div class="modal fade" id="user_modal"tabindex="-1" role="dialog">    <div class="modal-dialog">        <div class="modal-content">            <div class="modal-header">                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                <div class="col-sm-6 col-md-4" style="margin-top:15px; background-color:#FFF;" >                    <img src="http://dreamatico.com/data_images/kitten/kitten-2.jpg" alt="" class="img-rounded img-responsive" />                </div>                <h4 class="modal-title">Edwin Mak</h4>                <p>                    <i class="glyphicon glyphicon-envelope" ></i><span id="userEmail">simba@pridelands.com</span>                    <br />                    <i class="glyphicon glyphicon-phone" id="userCellphone"></i>(800) 548-8228                    <br />                </p>            </div>            <div class="modal-body">                <hr>                <div class="row">                    <div class="col-md-12">                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star-empty"></span>                        Anonymous                        <span class="pull-right">10 days ago</span>                        <p>This product was great in terms of quality. I would definitely buy another!</p>                    </div>                </div>                <hr>                <div class="row">                    <div class="col-md-12">                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star-empty"></span>                        Anonymous                        <span class="pull-right">12 days ago</span>                        <p>I've alredy ordered another one!</p>                    </div>                </div>                <hr>                <div class="row">                    <div class="col-md-12">                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star"></span>                        <span class="glyphicon glyphicon-star-empty"></span>                        Anonymous                        <span class="pull-right">15 days ago</span>                        <p>I've seen some better than this, but not at this price. I definitely recommend this item.</p>                    </div>                </div>            </div>            <div class="modal-footer">                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>                <button type="button" class="btn btn-primary" id="contract_confirm">Confirm</button>            </div>        </div><!-- /.modal-content -->    </div><!-- /.modal-dialog --></div><!-- /.modal --><!-- jQuery --><script src="js/jquery.js"></script><script type="text/javascript" src="js/handlebars.js"> </script><script type="text/javascript" src="js/login.js"></script><script src="js/buttons.js"></script><script type="text/x-handlebars-template" id="applicant-template">    <!-- Steppers Entry -->    <a id="test" class="list-group-item editableList" data-value={{objectId}}> <font>{{firstName}}</font>        <button class="pull-center btn btn-success text-center" data-toggle="modal" data-target="#user_modal">View</button><span class="pull-right">{{reviewScore}}</span>    </a></script><script type="text/javascript">    Parse.initialize("iJgCVgcqKKWl5drVVV0pu8ztWaXHT6NB87dlgiq7", "ah5O4IvqZrTZcjUEEuioXpqZngnzbzATAOdg14pz");    //Parse.initialize("JE6mg7y9bSavnzvNIVWDIP3TJrTHQvgqMhdMQusW", "6XOmcuw8IttoPGuKLE9YgSAEADEGAbrpA1dAxT8hU");</script><script src="js/search.js.js"></script><script type="text/javascript" src="js/servicePage.js"></script></body></html>
