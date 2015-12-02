@@ -5,26 +5,66 @@ function applyForTheJob(objectId){
 
 
 	query.get(objectId, {
-  success: function(service) {
-    // The object was retrieved successfully.
-		var relation = service.relation("applicant");
-		relation.add(Parse.User.current());
-		service.save();
-		alert();
+	  success: function(service) {
+	    // The object was retrieved successfully.
+			var relation = service.relation("applicant");
+			relation.add(Parse.User.current());
+			if(service.get("buying")){
+				service.set("sellerAccepted", true);
+			}else{
+				service.set("buyerAccepeted", true);
+			}
+			service.save();
+		},
+		error: function (error){
+			console.log(error.message);
+		}
+
+	});
+
+}
+
+	function applyForTheJobTwo (objectId){
+		var Service = Parse.Object.extend("service");
+		var query = new Parse.Query(Service);
 
 
-  },
-  error: function(object, error) {
-    // The object was not retrieved successfully.
-    // error is a Parse.Error with an error code and message.
-    console.log(error.message);
+		query.get(objectId, {
+	  success: function(service) {
+	    // The object was retrieved successfully.
+			if(service.get("buying")){
+				service.set("buyerAccepeted", true);
+			}else{
+				service.set("sellerAccepted", true);
+			}
 
-  }
+			var userId = sessionStorage.getItem("userView");
+			console.log(userId);
+			Parse.Cloud.run('getUserId', { objectId: userId }, {
+			    success: function(user) {
+						if(service.get("buying")){
+							console.log("tste");
+							console.log(user.get("firstName"));
+							service.set("serviceSeller", user);
+						}else{
+							service.set("serviceBuyer", user);
+						}
+						service.save();
+					},
+					error: function (error){
+						console.log(error.message);
+					}
+		});
+
+
+	  },
+	  error: function(object, error) {
+	    // The object was not retrieved successfully.
+	    // error is a Parse.Error with an error code and message.
+	    console.log(error.message);
+
+	  }
 });
-
-
-
-
 }
 
 function getService(objectId){
@@ -96,6 +136,7 @@ function getApplicants (service) {
 }
 
 function populateViewModal(userId) {
+	sessionStorage.setItem("userView", userId);
 
 	Parse.Cloud.run('getUserId', { objectId: userId }, {
 		success: function(user) {
@@ -114,6 +155,7 @@ function populateViewModal(userId) {
 			} finally {
 
 			}
+
 
 			var review = Parse.Object.extend("Review");
 			var query = new Parse.Query(review);
@@ -164,6 +206,17 @@ function getUser(userId) {
 
 			    }
 
+
+					if (user.get("firstName") == Parse.User.current().get("firstName")){
+						console.log("same");
+						$("#apply-for-job").hide();
+						$("#user_confirm").show();
+					}else{
+						console.log("not same");
+						$("#apply-for-job").show();
+						$("#user_confirm").hide();
+					}
+
 					var review = Parse.Object.extend("Review");
 					var query = new Parse.Query(review);
 					query.equalTo("reviewedFor", user);
@@ -199,7 +252,7 @@ $(document).ready(function(){
 	var currentUser = sessionStorage.getItem("currentUser");
 	console.log("USUARIO"+currentUser);
 
-	
+
 
 
 
@@ -210,9 +263,19 @@ $(document).ready(function(){
 //	var v1 = qs.get("objectId");
 
 	console.log("este e o id"+ id);
-	$("#contract_confirm").on("click", function () {
+	$("#contract_confirm").on("click", function (e) {
+		e.preventDefault();
 		//alert();
 		applyForTheJob(id);
+	});
+
+	$("#user_confirm").on("click", function (e){
+		e.preventDefault();
+		$("#user_modal").hide();
+		$("#contract_confirm2").on("click",function(e){
+			applyForTheJobTwo(id);
+
+		})
 	});
 
 
