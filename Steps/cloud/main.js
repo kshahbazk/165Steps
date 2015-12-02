@@ -9,7 +9,7 @@ Parse.Cloud.define("queryServices", function(request, response) {
 
   var query = new Parse.Query("service");
 
-  query.contains("name", request.param.serviceQuery);
+  query.contains("name", request.params.serviceQuery);
 
   query.find({
     success: function(results) {

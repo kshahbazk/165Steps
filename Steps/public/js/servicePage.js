@@ -107,6 +107,9 @@ function getUser(userId) {
 
 	        // Do something with the returned Parse.Object values
 					//console.log(user.get("firstName"));
+					if(user == Parse.User.current()){
+						$("#apply-for-job").hide();
+					}
 					$("#userName").html(user.get("firstName") + " " + user.get("lastName"));
 					$("#userEmail").html(user.get("email"));
 
