@@ -40,25 +40,34 @@ function checkEmail(){
 function checkUser(){
   if (Parse.User.current()){
     var user = Parse.User.current();
-	user.fetch();
-    isLoggedIn = true;
-    // change navbar name in the left
+      isLoggedIn = true;
 
-    $("#navBarName").html(user.get("firstName"));
+      user.fetch({
+          success: function(user) {
+              // change navbar name in the left
+              $("#navBarName").html(user.get("firstName")+" ");
 
-    //change names in the profile page
+              //change names in the profile page
 
-    try {
-        $("#profilePic")[0].src = user.get("profileImage").url();
-    } catch (e) {
-      
-    } finally {
+              try {
+                  $("#profilePic")[0].src = user.get("profileImage").url();
+              } catch (e) {
 
-    }
+              } finally {
 
-    $("#profileName").html(user.get("firstName")+" "+user.get("lastName"));
-    $("#profileCellphone").html(user.get("cellphone"));
-    $("#profileEmail").html(user.get("email"));
+              }
+
+              $("#profileName").html(user.get("firstName")+" "+user.get("lastName"));
+              $("#profileCellphone").html(user.get("cellphone"));
+              $("#profileEmail").html(user.get("email"));
+
+          },
+          error: function(myObject, error) {
+              // The object was not refreshed successfully.
+              // error is a Parse.Error with an error code and message.
+          }
+      });
+
 
     console.log(isLoggedIn);
   }
